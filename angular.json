@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "KryoseFrontend"
+    }
+  },
+  "defaultProject": "KryoseFrontend",
+  "cli": {
+    "analytics": false
+  }
 }
