@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
 import {VideoTextComponent} from './video-text.component';
+import {MatSliderModule} from '@angular/material/slider';
 
 
 
@@ -13,7 +14,8 @@ import {VideoTextComponent} from './video-text.component';
   imports: [
     CommonModule,
     FormsModule,
-    RouterModule.forChild([{ path: '', component: VideoTextComponent }])
+    RouterModule.forChild([{path: '', component: VideoTextComponent}]),
+    MatSliderModule
   ]
 })
 export class VideoTextModule {}
