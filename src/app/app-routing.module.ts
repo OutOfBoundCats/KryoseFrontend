@@ -3,10 +3,11 @@ import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 import {AuthModule} from './modules/auth/auth.module';
 import {ProfileModule} from './modules/profile-page/profile.module';
 import {LoggerModule} from './modules/logger/logger.module';
+import {VideoTextModule} from './modules/video-text/video-text.module';
 
 
 const appRoutes: Routes = [
-  { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
+  { path: '', redirectTo: '/videotext', pathMatch: 'full' },
   {
     path: 'auth',
     loadChildren: () => AuthModule
@@ -19,15 +20,15 @@ const appRoutes: Routes = [
     path: 'logger',
     loadChildren: () => LoggerModule
   },
+  {
+    path: 'videotext',
+    loadChildren: () => VideoTextModule
+  }
 
 ];
 
 @NgModule({
   imports: [
-    AuthModule,
-    ProfileModule,
-    LoggerModule,
-
     RouterModule.forRoot(appRoutes)
   ],
   exports: [RouterModule]

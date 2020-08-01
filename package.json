@@ -23,6 +23,7 @@
     "@angular/router": "~10.0.5",
     "bootstrap": "^4.5.0",
     "firebase": "^7.17.1",
+    "jquery": "^3.5.1",
     "ngx-auth-firebaseui": "^0.1.2",
     "rxjs": "~6.5.5",
     "tslib": "^2.0.0",
