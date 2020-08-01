@@ -12,6 +12,7 @@ import { VideoTextComponent } from './modules/video-text/video-text.component';
 import { TextAudioComponent } from './modules/text-audio/text-audio.component';
 import { ScreenshotComponent } from './modules/screenshot/screenshot.component';
 import { LoggerComponent } from './modules/logger/logger.component';
+import { AuthComponent } from './modules/auth/auth.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { LoggerComponent } from './modules/logger/logger.component';
     VideoTextComponent,
     TextAudioComponent,
     ScreenshotComponent,
-    LoggerComponent
+    LoggerComponent,
+    AuthComponent
   ],
     imports: [
         BrowserModule,
