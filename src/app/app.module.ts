@@ -6,6 +6,7 @@ import { FooterComponent } from './components/shared/footer/footer.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import {RouterModule} from '@angular/router';
 import {AppRoutingModule} from './app-routing.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 
@@ -18,7 +19,8 @@ import {AppRoutingModule} from './app-routing.module';
     imports: [
         BrowserModule,
         RouterModule,
-      AppRoutingModule
+      AppRoutingModule,
+      BrowserAnimationsModule
     ],
   providers: [],
   bootstrap: [AppComponent]
