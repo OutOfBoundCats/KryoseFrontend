@@ -1,0 +1,17 @@
+.editing {
+  display: grid;
+  padding: 1rem;
+  grid-column-gap: 5px;
+  grid-row-gap: 50px;
+  background-color: whitesmoke;
+}
+.textEditor{
+  grid-column: 1/3 ;
+  grid-row: 1;
+  border-style: groove;
+}
+.videoEditor{
+  grid-column: 3 / 3;
+  grid-row: 1;
+  border-style: groove;
+}

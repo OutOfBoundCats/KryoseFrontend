@@ -5,12 +5,18 @@ import { RouterModule } from '@angular/router';
 
 import {VideoTextComponent} from './video-text.component';
 import {MatSliderModule} from '@angular/material/slider';
+import {TexteditorComponent} from '../../components/texteditor/texteditor.component';
+import {VideoEditorComponent} from '../../components/video-editor/video-editor.component';
 
 
 
 
 @NgModule({
-  declarations: [VideoTextComponent],
+  declarations: [
+    VideoTextComponent,
+    TexteditorComponent,
+    VideoEditorComponent
+  ],
   imports: [
     CommonModule,
     FormsModule,
