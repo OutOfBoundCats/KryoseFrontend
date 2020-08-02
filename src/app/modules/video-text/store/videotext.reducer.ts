@@ -9,6 +9,7 @@ const initialState: State = {
   loading: false
 };
 
+// tslint:disable-next-line:typedef
 export function videoTextReducer(
   state = initialState,
   action: videoActions.videoTextActions
