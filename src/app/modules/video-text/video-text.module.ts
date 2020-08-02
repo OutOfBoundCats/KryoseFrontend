@@ -7,6 +7,7 @@ import {VideoTextComponent} from './video-text.component';
 import {MatSliderModule} from '@angular/material/slider';
 import {TexteditorComponent} from '../../components/texteditor/texteditor.component';
 import {VideoEditorComponent} from '../../components/video-editor/video-editor.component';
+import {SidebarComponent} from '../../components/shared/sidebar/sidebar.component';
 
 
 
@@ -15,7 +16,8 @@ import {VideoEditorComponent} from '../../components/video-editor/video-editor.c
   declarations: [
     VideoTextComponent,
     TexteditorComponent,
-    VideoEditorComponent
+    VideoEditorComponent,
+    SidebarComponent
   ],
   imports: [
     CommonModule,
