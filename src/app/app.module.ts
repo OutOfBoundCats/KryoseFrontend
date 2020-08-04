@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { FooterComponent } from './components/shared/footer/footer.component';
-import { NavbarComponent } from './components/shared/navbar/navbar.component';
+
 import {RouterModule} from '@angular/router';
 import {AppRoutingModule} from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -16,11 +16,10 @@ import {StoreModule} from '@ngrx/store';
 
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    FooterComponent,
-    NavbarComponent
-  ],
+    declarations: [
+        AppComponent,
+        FooterComponent
+    ],
     imports: [
         BrowserModule,
         RouterModule,
@@ -28,7 +27,9 @@ import {StoreModule} from '@ngrx/store';
         StoreModule.forRoot(fromApp.appReducer),
         BrowserAnimationsModule
     ],
-  providers: [],
-  bootstrap: [AppComponent]
+    providers: [],
+    exports: [
+    ],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }

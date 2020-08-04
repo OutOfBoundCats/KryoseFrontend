@@ -8,6 +8,8 @@ import {MatSliderModule} from '@angular/material/slider';
 import {TexteditorComponent} from '../../components/texteditor/texteditor.component';
 import {VideoEditorComponent} from '../../components/video-editor/video-editor.component';
 import {SidebarComponent} from '../../components/shared/sidebar/sidebar.component';
+import {NavbarComponent} from '../../components/shared/navbar/navbar.component';
+
 
 
 
@@ -17,13 +19,15 @@ import {SidebarComponent} from '../../components/shared/sidebar/sidebar.componen
     VideoTextComponent,
     TexteditorComponent,
     VideoEditorComponent,
-    SidebarComponent
+    SidebarComponent,
+    NavbarComponent
   ],
   imports: [
     CommonModule,
     FormsModule,
     RouterModule.forChild([{path: '', component: VideoTextComponent}]),
     MatSliderModule
+
   ]
 })
 export class VideoTextModule {}
