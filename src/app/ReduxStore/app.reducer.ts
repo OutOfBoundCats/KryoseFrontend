@@ -6,6 +6,7 @@ import * as VideoText from '../modules/video-text/store/videotext.reducer';
 export interface AppState {
 videoText: VideoText.State;
 
+
 }
 
 
