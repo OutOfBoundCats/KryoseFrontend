@@ -10,8 +10,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import * as fromApp from '../app/ReduxStore/app.reducer';
 import {StoreModule} from '@ngrx/store';
-import { SignInComponent } from './components/sign-in/sign-in.component';
-import { SignUpComponent } from './components/sign-up/sign-up.component';
+
 
 
 
@@ -20,9 +19,7 @@ import { SignUpComponent } from './components/sign-up/sign-up.component';
 @NgModule({
     declarations: [
         AppComponent,
-        FooterComponent,
-        SignInComponent,
-        SignUpComponent
+        FooterComponent
     ],
     imports: [
         BrowserModule,
