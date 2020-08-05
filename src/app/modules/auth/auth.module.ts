@@ -17,7 +17,13 @@ import {SignUpComponent} from '../../components/sign-up/sign-up.component';
   imports: [
     CommonModule,
     FormsModule,
-    RouterModule.forChild([{ path: '', component: AuthComponent }])
+    RouterModule.forChild([{ path: '', component: AuthComponent,
+    children: [
+      {path: 'signin', component: SignInComponent},
+      {path: 'signup', component: SignUpComponent}
+      ]
+    }]
+    )
   ]
 })
 export class AuthModule {}
