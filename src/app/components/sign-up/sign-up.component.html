@@ -1,1 +1,24 @@
-<p>sign-up works!</p>
+<body class="text-center">
+
+<form class="form-signin">
+  <!--  <img class="mb-4" src="../assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">-->
+  <!--  <img class="mb-4" src="../../Images/Kryose_Orange.png" alt="" width="905" height="269" >-->
+  <h1 id="heading" class="h1 mb-3 font-weight-bold " style="font-size: 4vw;">Kryose</h1>
+  <h1 class="h3 mb-3 font-weight-normal">Please sign Up</h1>
+  <label for="inputEmail" class="sr-only">Email address</label>
+  <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+  <label for="inputPassword" class="sr-only">Password</label>
+  <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+
+  <button class="btn btn-lg btn-danger btn-block" type="submit">Sign up</button>
+  <div style="padding-top: 5vh">
+    <p>Already have a account</p>
+    <button class="btn btn-primary" routerLink="/auth/signin">
+      Sign In
+    </button>
+
+  </div>
+
+  <p class="mt-5 mb-3 text-muted">&copy; 2017-2020 Kryose</p>
+</form>
+</body>
