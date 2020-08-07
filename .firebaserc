@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "kryose-2c2ea": {
+      "hosting": {
+        "KryoseFrontend": [
+          "kryose-2c2ea"
+        ]
+      }
+    }
+  }
+}

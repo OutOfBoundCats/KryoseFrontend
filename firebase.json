@@ -1,0 +1,19 @@
+{
+  "hosting": [
+    {
+      "target": "KryoseFrontend",
+      "public": "dist/KryoseFrontend",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ]
+    }
+  ]
+}

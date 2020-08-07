@@ -4,7 +4,16 @@
 
 export const environment = {
   production: false,
-  firebase_api_key: 'AIzaSyCpJEKt19fEJ06GXQX01XFCL4MeWt-S0YM'
+  firebase : {
+    apiKey: "AIzaSyCpJEKt19fEJ06GXQX01XFCL4MeWt-S0YM",
+    authDomain: "kryose-2c2ea.firebaseapp.com",
+    databaseURL: "https://kryose-2c2ea.firebaseio.com",
+    projectId: "kryose-2c2ea",
+    storageBucket: "kryose-2c2ea.appspot.com",
+    messagingSenderId: "1098147281101",
+    appId: "1:1098147281101:web:953079dd2cf1e387af9184",
+    measurementId: "G-R58SR72X7L"
+  }
 };
 
 /*

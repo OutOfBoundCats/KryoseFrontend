@@ -6,6 +6,10 @@ import {AuthComponent} from './auth.component';
 import {SignInComponent} from '../../components/sign-in/sign-in.component';
 import {SignUpComponent} from '../../components/sign-up/sign-up.component';
 
+import {AngularFireModule} from '@angular/fire';
+import {AngularFireDatabaseModule} from '@angular/fire/database';
+import {environment} from '../../../environments/environment';
+import {AngularFirestoreModule} from '@angular/fire/firestore';
 
 
 
@@ -23,7 +27,10 @@ import {SignUpComponent} from '../../components/sign-up/sign-up.component';
       {path: 'signup', component: SignUpComponent}
       ]
     }]
-    )
+    ),
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireDatabaseModule,
+    AngularFirestoreModule
   ]
 })
 export class AuthModule {}
