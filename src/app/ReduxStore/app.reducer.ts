@@ -5,7 +5,6 @@ import * as Auth from '../modules/auth/store/auth.reducer';
 
 
 export interface AppState {
-videoText: VideoText.State;
 authReduce: Auth.State;
 
 }
@@ -14,6 +13,5 @@ authReduce: Auth.State;
 // @ts-ignore
 
 export const appReducer: ActionReducerMap<AppState> = {
-  videoText: VideoText.videoTextReducer,
-  auth: Auth.authReducer
+  authReduce: Auth.authReducer
 };

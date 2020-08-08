@@ -10,6 +10,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import * as fromApp from '../app/ReduxStore/app.reducer';
 import {StoreModule} from '@ngrx/store';
+import {EffectsModule} from '@ngrx/effects';
+import {AuthEffects} from './modules/auth/store/auth.effects';
+import {HttpClientModule} from '@angular/common/http';
+import {StoreDevtoolsModule} from '@ngrx/store-devtools';
+import {environment} from '../environments/environment';
+
 
 
 
@@ -23,10 +29,13 @@ import {StoreModule} from '@ngrx/store';
     ],
     imports: [
         BrowserModule,
+        HttpClientModule,
         RouterModule,
         AppRoutingModule,
         StoreModule.forRoot(fromApp.appReducer),
-        BrowserAnimationsModule
+        BrowserAnimationsModule,
+        StoreDevtoolsModule.instrument({ logOnly: environment.production }),
+        EffectsModule.forRoot()
     ],
     providers: [],
     exports: [

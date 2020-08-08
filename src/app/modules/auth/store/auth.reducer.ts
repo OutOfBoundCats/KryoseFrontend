@@ -1,5 +1,6 @@
 import * as AuthActions from './auth.actions';
 import {User} from '../../../Models/user.model';
+import {Action} from '@ngrx/store';
 
 export interface State {
   user: User;
@@ -15,9 +16,14 @@ const initialState: State = {
 // tslint:disable-next-line:typedef
 export function authReducer(
   state = initialState,
-  action: AuthActions.AuthActions
+  action: Action
 ) {
-
+  switch (action.type) {
+    case AuthActions.SIGNUP:
+      return state;
+    default:
+      return state;
+  }
 
 
 }
