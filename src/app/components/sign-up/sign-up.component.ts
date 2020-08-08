@@ -3,13 +3,14 @@ import {NgForm} from '@angular/forms';
 // Firebase App (the core Firebase SDK) is always required and
 // must be listed before other Firebase SDKs
 import * as firebase from 'firebase/app';
-
+import * as ApppStore from '../../ReduxStore/app.reducer';
 
 // Add the Firebase services that you want to use
 import 'firebase/auth';
 import 'firebase/firestore';
 import {AngularFireAuth} from '@angular/fire/auth';
 import {Router} from '@angular/router';
+import {Store} from '@ngrx/store';
 
 
 
@@ -23,7 +24,7 @@ export class SignUpComponent implements OnInit {
   private errorCode: String | number;
   private errorMessage: String | number;
 
-  constructor(private AngularFireAUth: AngularFireAuth, private router: Router) { }
+  constructor(private AngularFireAUth: AngularFireAuth, private router: Router, private store: Store<ApppStore.AppState>) { }
 
 
   ngOnInit(): void {
