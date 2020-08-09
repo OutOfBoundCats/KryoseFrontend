@@ -30,6 +30,12 @@ export function authReducer(
         user: null,
         authError: action.payload
       };
+    case AuthActions.SIGNUPDESTROY:
+      return {
+        ...state,
+        user: null,
+        authError: null
+      };
     default:
       return state;
   }

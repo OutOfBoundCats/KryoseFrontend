@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnDestroy, OnInit} from '@angular/core';
 import {NgForm} from '@angular/forms';
 // Firebase App (the core Firebase SDK) is always required and
 // must be listed before other Firebase SDKs
@@ -20,11 +20,12 @@ import * as AuthActions from '../../modules/auth/store/auth.actions';
   templateUrl: './sign-up.component.html',
   styleUrls: ['./sign-up.component.css']
 })
-export class SignUpComponent implements OnInit {
+export class SignUpComponent implements OnInit, OnDestroy {
   // tslint:disable-next-line:ban-types
   private errorCode: string | number;
    errorText = null;
    alertClass = 'alert alert-danger';
+
 
   constructor(private AngularFireAUth: AngularFireAuth, private router: Router, private store: Store<ApppStore.AppState>) { }
 
@@ -53,4 +54,9 @@ export class SignUpComponent implements OnInit {
     //   this.router.navigateByUrl('/signin');
     // });
   }
+
+  ngOnDestroy(): void {
+    this.store.dispatch(new AuthActions.SignupDestroy());
+  }
+
 }

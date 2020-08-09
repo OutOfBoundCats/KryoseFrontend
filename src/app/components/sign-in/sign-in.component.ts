@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import {FormGroup} from '@angular/forms';
+import {FormGroup, NgForm} from '@angular/forms';
+import {AngularFireAuth} from '@angular/fire/auth';
+import {Router} from '@angular/router';
+import {Store} from '@ngrx/store';
+import * as ApppStore from '../../ReduxStore/app.reducer';
 
 @Component({
   selector: 'app-sign-in',
@@ -9,9 +13,15 @@ import {FormGroup} from '@angular/forms';
 export class SignInComponent implements OnInit {
 
   signINForm: FormGroup;
-  constructor() { }
+  constructor(private AngularFireAUth: AngularFireAuth, private router: Router, private store: Store<ApppStore.AppState>) { }
 
   ngOnInit(): void {
   }
 
+  onSubmit(signINForm: NgForm) {
+    const email = signINForm.value.inputEmail;
+    const password = signINForm.value.inputPassword;
+    console.log(email +' ' + password);
+
+  }
 }
