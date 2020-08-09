@@ -16,11 +16,20 @@ const initialState: State = {
 // tslint:disable-next-line:typedef
 export function authReducer(
   state = initialState,
-  action: Action
+  action: AuthActions.AuthActions
 ) {
   switch (action.type) {
     case AuthActions.SIGNUP:
-      return state;
+      return {
+        ...state,
+        user: null
+      };
+    case AuthActions.LOGIN_FAIL:
+      return {
+        ...state,
+        user: null,
+        authError: action.payload
+      };
     default:
       return state;
   }

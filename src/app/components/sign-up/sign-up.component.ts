@@ -22,12 +22,17 @@ import * as AuthActions from '../../modules/auth/store/auth.actions';
 })
 export class SignUpComponent implements OnInit {
   // tslint:disable-next-line:ban-types
-  private errorCode: String | number;
+  private errorCode: string | number;
+   errorText = null;
 
   constructor(private AngularFireAUth: AngularFireAuth, private router: Router, private store: Store<ApppStore.AppState>) { }
 
 
   ngOnInit(): void {
+    this.store.select('authReduce').subscribe(authState => {
+      this.errorText = authState.authError;
+      }
+    );
   }
 
   // tslint:disable-next-line:typedef

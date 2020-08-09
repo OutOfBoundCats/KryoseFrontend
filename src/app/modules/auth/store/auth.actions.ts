@@ -12,4 +12,10 @@ export class Signup implements Action {
   constructor(public payload: { email: string;  password: string; }) {}
 }
 
-export type AuthActions =  Signup;
+export class LoginFail implements Action {
+  readonly type = LOGIN_FAIL;
+
+  constructor(public payload: string) {}
+}
+
+export type AuthActions =  Signup | LoginFail;
