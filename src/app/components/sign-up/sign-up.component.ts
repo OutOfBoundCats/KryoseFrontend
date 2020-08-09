@@ -24,6 +24,7 @@ export class SignUpComponent implements OnInit {
   // tslint:disable-next-line:ban-types
   private errorCode: string | number;
    errorText = null;
+   alertClass = 'alert alert-danger';
 
   constructor(private AngularFireAUth: AngularFireAuth, private router: Router, private store: Store<ApppStore.AppState>) { }
 
@@ -31,6 +32,11 @@ export class SignUpComponent implements OnInit {
   ngOnInit(): void {
     this.store.select('authReduce').subscribe(authState => {
       this.errorText = authState.authError;
+      if (this.errorText === 'Success account has been created'){
+          this.alertClass = 'alert alert-success';
+      }else{
+        this.alertClass = 'alert alert-danger';
+      }
       }
     );
   }

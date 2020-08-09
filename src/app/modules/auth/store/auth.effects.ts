@@ -61,16 +61,7 @@ export class AuthEffects{
            return of(new AuthActions.LoginFail(errorResp));
         } )
       );
-      // if (this.errorMessage){
-      //   console.log(this.errorMessage + 'this from if block');
-      //   return of(new AuthActions.LoginFail(this.errorMessage));
-      // }else if (this.errorMessage === null){
-      //   console.log(this.errorMessage + 'this from else block');
-      //   return of(new AuthActions.LoginFail('Success account has been created'));
-      // }
-
       }
-
     )
   );
 
