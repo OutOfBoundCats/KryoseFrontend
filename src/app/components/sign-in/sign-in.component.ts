@@ -5,6 +5,8 @@ import {Router} from '@angular/router';
 import {Store} from '@ngrx/store';
 import * as ApppStore from '../../ReduxStore/app.reducer';
 
+import * as AuthActions from '../../modules/auth/store/auth.actions';
+
 @Component({
   selector: 'app-sign-in',
   templateUrl: './sign-in.component.html',
@@ -18,10 +20,11 @@ export class SignInComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  // tslint:disable-next-line:typedef
   onSubmit(signINForm: NgForm) {
     const email = signINForm.value.inputEmail;
     const password = signINForm.value.inputPassword;
     console.log(email +' ' + password);
-
+    this.store.dispatch(new AuthActions.SignIn({email, password}));
   }
 }

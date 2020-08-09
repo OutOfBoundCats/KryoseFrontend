@@ -66,6 +66,29 @@ export class AuthEffects{
     )
   );
 
+  @Effect()
+  signin = this.actions$.pipe(
+    ofType(authActions.SIGNIN),
+    switchMap( (authData: authActions.Signup) => {
+        console.log('SignUp Effect');
+        console.log(authData.payload.email);
+        console.log(authData.payload.password);
+        // use from to convert Promise to observable so we can use pipe to transform data
+        return from(this.AngularFireAUth.signInWithEmailAndPassword(authData.payload.email, authData.payload.password)).pipe(
+          map((returnResult) => {
+            // get id token
+            console.log(returnResult.user.getIdToken());
+            return new AuthActions.LoginFail('Success account has been created.Please Sign In');
+          } ),
+          catchError(errorResp => {
+            console.log(errorResp);
+            return of(new AuthActions.LoginFail(errorResp));
+          } )
+        );
+      }
+    )
+  );
+
 
 
 }

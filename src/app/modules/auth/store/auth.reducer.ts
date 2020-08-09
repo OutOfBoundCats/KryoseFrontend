@@ -36,6 +36,12 @@ export function authReducer(
         user: null,
         authError: null
       };
+    case AuthActions.SIGNIN:
+      return {
+        ...state,
+        user: null,
+        authError: null
+      };
     default:
       return state;
   }
