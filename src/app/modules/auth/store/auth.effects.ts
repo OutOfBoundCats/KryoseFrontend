@@ -77,7 +77,7 @@ export class AuthEffects{
         return from(this.AngularFireAUth.signInWithEmailAndPassword(authData.payload.email, authData.payload.password)).pipe(
           map((returnResult) => {
             // get id token
-            console.log(returnResult.user.getIdToken());
+            console.log(returnResult.user.getIdTokenResult());
             return new AuthActions.LoginFail('Success account has been created.Please Sign In');
           } ),
           catchError(errorResp => {
