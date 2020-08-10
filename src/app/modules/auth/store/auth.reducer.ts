@@ -6,12 +6,14 @@ export interface State {
   user: User;
   authError: string;
   loading: boolean;
+  authSignInError: string;
 }
 
 const initialState: State = {
   user: null,
   authError: null,
-  loading: false
+  loading: false,
+  authSignInError: null
 };
 // tslint:disable-next-line:typedef
 export function authReducer(
@@ -41,6 +43,12 @@ export function authReducer(
         ...state,
         user: null,
         authError: null
+      };
+    case AuthActions.SIGNINFAIL:
+      return {
+        ...state,
+        user: null,
+        authSignInError: action.payload
       };
     default:
       return state;

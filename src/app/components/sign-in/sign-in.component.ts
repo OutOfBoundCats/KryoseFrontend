@@ -15,9 +15,21 @@ import * as AuthActions from '../../modules/auth/store/auth.actions';
 export class SignInComponent implements OnInit {
 
   signINForm: FormGroup;
+  signInErrorText: string;
+  alertClass = 'alert alert-danger';
+
   constructor(private AngularFireAUth: AngularFireAuth, private router: Router, private store: Store<ApppStore.AppState>) { }
 
   ngOnInit(): void {
+    this.store.select('authReduce').subscribe(authState => {
+        this.signInErrorText = authState.authSignInError;
+        if (this.signInErrorText === 'Success account has been created'){
+          this.alertClass = 'alert alert-success';
+        }else{
+          this.alertClass = 'alert alert-danger';
+        }
+      }
+    );
   }
 
   // tslint:disable-next-line:typedef

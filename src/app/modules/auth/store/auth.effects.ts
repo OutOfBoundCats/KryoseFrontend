@@ -77,16 +77,8 @@ export class AuthEffects{
         // use from to convert Promise to observable so we can use pipe to transform data
         return from(this.AngularFireAUth.signInWithEmailAndPassword(authData.payload.email, authData.payload.password)).pipe(
           map((returnResult) => {
-            // get id token
-            console.log('return result is -> ' + returnResult);
-            console.log(returnResult);
-            console.log('refresh token result is->  ' + returnResult.user.getIdTokenResult());
-            console.log(returnResult.user.getIdTokenResult());
-            console.log('refresh token is -> ' + returnResult.user.refreshToken);
             // we get refresh token here
             console.log(returnResult.user.refreshToken);
-            console.log('getToken is->  ');
-            console.log(returnResult.user.getIdToken());
             // we get id token here
             returnResult.user.getIdToken().then(function(idToken) {
               console.log(idToken);
@@ -95,7 +87,7 @@ export class AuthEffects{
           } ),
           catchError(errorResp => {
             console.log(errorResp);
-            return of(new AuthActions.LoginFail(errorResp));
+            return of(new AuthActions.SignInFail(errorResp.message));
           } )
         );
       }

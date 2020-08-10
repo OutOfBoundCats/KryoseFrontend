@@ -5,6 +5,9 @@
   <!--  <img class="mb-4" src="../../Images/Kryose_Orange.png" alt="" width="905" height="269" >-->
   <h1 id="heading" class="h1 mb-3 font-weight-bold " style="font-size: 4vw;">Kryose</h1>
   <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+  <div *ngIf="signInErrorText" [ngClass]="alertClass" role="alert">
+    {{signInErrorText}}
+  </div>
   <label for="inputEmail" class="sr-only">Email address</label>
   <input ngModel name="inputEmail" type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
   <br>
