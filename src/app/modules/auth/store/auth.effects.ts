@@ -8,6 +8,7 @@ import { HttpClient } from '@angular/common/http';
 import * as authActions from './auth.actions';
 import 'firebase/auth';
 import 'firebase/firestore';
+
 import {AngularFireAuth} from '@angular/fire/auth';
 import {createEffects} from '@ngrx/effects/src/effects_module';
 import {Store} from '@ngrx/store';
@@ -77,7 +78,19 @@ export class AuthEffects{
         return from(this.AngularFireAUth.signInWithEmailAndPassword(authData.payload.email, authData.payload.password)).pipe(
           map((returnResult) => {
             // get id token
+            console.log('return result is -> ' + returnResult);
+            console.log(returnResult);
+            console.log('refresh token result is->  ' + returnResult.user.getIdTokenResult());
             console.log(returnResult.user.getIdTokenResult());
+            console.log('refresh token is -> ' + returnResult.user.refreshToken);
+            // we get refresh token here
+            console.log(returnResult.user.refreshToken);
+            console.log('getToken is->  ');
+            console.log(returnResult.user.getIdToken());
+            // we get id token here
+            returnResult.user.getIdToken().then(function(idToken) {
+              console.log(idToken);
+            });
             return new AuthActions.LoginFail('Success account has been created.Please Sign In');
           } ),
           catchError(errorResp => {
