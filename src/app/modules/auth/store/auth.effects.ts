@@ -56,11 +56,11 @@ export class AuthEffects{
       // use from to convert Promise to observable so we can use pipe to transform data
       return from(this.AngularFireAUth.createUserWithEmailAndPassword(authData.payload.email, authData.payload.password)).pipe(
         map(() => {
-          return new AuthActions.LoginFail('Success account has been created.Please Sign In');
+          return new AuthActions.SignupFail('Success account has been created.Please Sign In');
         } ),
         catchError(errorResp => {
            console.log(errorResp);
-           return of(new AuthActions.LoginFail(errorResp));
+           return of(new AuthActions.SignupFail(errorResp));
         } )
       );
       }
@@ -83,7 +83,7 @@ export class AuthEffects{
             returnResult.user.getIdToken().then(function(idToken) {
               console.log(idToken);
             });
-            return new AuthActions.LoginFail('Success account has been created.Please Sign In');
+            return new AuthActions.SignInFail('Success');
           } ),
           catchError(errorResp => {
             console.log(errorResp);

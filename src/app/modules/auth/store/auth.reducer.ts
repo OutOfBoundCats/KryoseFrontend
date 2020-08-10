@@ -26,7 +26,7 @@ export function authReducer(
         ...state,
         user: null
       };
-    case AuthActions.LOGIN_FAIL:
+    case AuthActions.SIGNUPFAIL:
       return {
         ...state,
         user: null,

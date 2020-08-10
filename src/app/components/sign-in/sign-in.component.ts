@@ -23,7 +23,7 @@ export class SignInComponent implements OnInit {
   ngOnInit(): void {
     this.store.select('authReduce').subscribe(authState => {
         this.signInErrorText = authState.authSignInError;
-        if (this.signInErrorText === 'Success account has been created'){
+        if (this.signInErrorText === 'Success'){
           this.alertClass = 'alert alert-success';
         }else{
           this.alertClass = 'alert alert-danger';

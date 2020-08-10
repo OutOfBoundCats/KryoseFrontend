@@ -2,7 +2,7 @@ import {Action} from '@ngrx/store';
 
 export const LOGIN_START = '[Auth] Login Start';
 export const SIGNIN = '[Auth] SignIn';
-export const LOGIN_FAIL = '[Auth] Login Fail';
+export const SIGNUPFAIL = '[Auth] Login Fail';
 export const LOGOUT = '[Auth] Logout';
 export const SIGNUP = '[Auth] Signup';
 export const SIGNUPDESTROY = '[Auth] SignupDestroy';
@@ -14,8 +14,8 @@ export class Signup implements Action {
   constructor(public payload: { email: string;  password: string; }) {}
 }
 
-export class LoginFail implements Action {
-  readonly type = LOGIN_FAIL;
+export class SignupFail implements Action {
+  readonly type = SIGNUPFAIL;
 
   constructor(public payload: string) {}
 }
@@ -36,4 +36,4 @@ export class SignInFail implements Action {
   constructor(public payload: string) {}
 }
 
-export type AuthActions =  Signup | LoginFail | SignupDestroy | SignIn |SignInFail;
+export type AuthActions =  Signup | SignupFail | SignupDestroy | SignIn |SignInFail;
