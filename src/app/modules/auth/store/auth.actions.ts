@@ -1,4 +1,5 @@
 import {Action} from '@ngrx/store';
+import {User} from '../../../Models/user.model';
 
 export const LOGIN_START = '[Auth] Login Start';
 export const SIGNIN = '[Auth] SignIn';
@@ -7,6 +8,7 @@ export const LOGOUT = '[Auth] Logout';
 export const SIGNUP = '[Auth] Signup';
 export const SIGNUPDESTROY = '[Auth] SignupDestroy';
 export const SIGNINFAIL = '[Auth] SignInFail';
+export const SIGNINSUCCESS = '[Auth] SignINSuccess';
 
 export class Signup implements Action {
   readonly type = SIGNUP;
@@ -35,5 +37,10 @@ export class SignInFail implements Action {
 
   constructor(public payload: string) {}
 }
+export class SignInSuccess implements Action {
+  readonly type = SIGNINSUCCESS;
 
-export type AuthActions =  Signup | SignupFail | SignupDestroy | SignIn |SignInFail;
+  constructor(public payload: User) {}
+}
+
+export type AuthActions =  Signup | SignupFail | SignupDestroy | SignIn |SignInFail |SignInSuccess;

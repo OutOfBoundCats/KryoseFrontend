@@ -14,6 +14,9 @@ import {createEffects} from '@ngrx/effects/src/effects_module';
 import {Store} from '@ngrx/store';
 import * as ApppStore from '../../../ReduxStore/app.reducer';
 import * as AuthActions from './auth.actions';
+import {User} from '../../../Models/user.model';
+import {AuthService} from '../../../services/security/auth.service';
+
 
 @Injectable()
 export class AuthEffects{
@@ -22,18 +25,11 @@ export class AuthEffects{
   constructor(private AngularFireAUth: AngularFireAuth, private actions$: Actions,
               private http: HttpClient,
               private router: Router,
-              private store: Store<ApppStore.AppState>) {
+              private store: Store<ApppStore.AppState>,
+              private MyAuthService: AuthService) {
   }
 
-  // @Effect()
-  // authLogin = this.actions$.pipe(
-  //   ofType(authActions.LOGIN_START),
-  //   switchMap((authData: authActions.LoginStart) => {
-  //     return this.AngularFireAUth.signInWithEmailAndPassword(authData.payload.email, authData.payload.password);
-  //     }
-  //
-  //   )
-  // );
+
 
   @Effect()
   signup = this.actions$.pipe(
@@ -42,17 +38,6 @@ export class AuthEffects{
       console.log('SignUp Effect');
       console.log(authData.payload.email);
       console.log(authData.payload.password);
-      // return  this.AngularFireAUth.createUserWithEmailAndPassword(authData.payload.email, authData.payload.password).then(value => {
-      //   console.log('success');
-      //   return of(new AuthActions.LoginFail('Success account has been created'));
-      // }).catch((error) => {
-      //   console.log(error);
-      //   console.log(error.message.toString());
-      //   this.errorMessage = error.message.toString();
-      //   console.log('assigned value to variable  ' + this.errorMessage);
-      //   alert(typeof error.message.toString());
-      //   return of(new AuthActions.LoginFail(this.errorMessage));
-      // } );
       // use from to convert Promise to observable so we can use pipe to transform data
       return from(this.AngularFireAUth.createUserWithEmailAndPassword(authData.payload.email, authData.payload.password)).pipe(
         map(() => {
@@ -67,32 +52,43 @@ export class AuthEffects{
     )
   );
 
-  @Effect()
-  signin = this.actions$.pipe(
-    ofType(authActions.SIGNIN),
-    switchMap( (authData: authActions.Signup) => {
-        console.log('SignUp Effect');
-        console.log(authData.payload.email);
-        console.log(authData.payload.password);
-        // use from to convert Promise to observable so we can use pipe to transform data
-        return from(this.AngularFireAUth.signInWithEmailAndPassword(authData.payload.email, authData.payload.password)).pipe(
-          map((returnResult) => {
-            // we get refresh token here
-            console.log(returnResult.user.refreshToken);
-            // we get id token here
-            returnResult.user.getIdToken().then(function(idToken) {
-              console.log(idToken);
-            });
-            return new AuthActions.SignInFail('Success');
-          } ),
-          catchError(errorResp => {
-            console.log(errorResp);
-            return of(new AuthActions.SignInFail(errorResp.message));
-          } )
-        );
-      }
-    )
-  );
+  // @Effect()
+  // signin = this.actions$.pipe(
+  //   ofType(authActions.SIGNIN),
+  //   switchMap( (authData: authActions.SignIn) => {
+  //       let myIdToken: string;
+  //       let myRefreshToken: string;
+  //       console.log('SignIn Effect');
+  //       console.log(authData.payload.email);
+  //       console.log(authData.payload.password);
+  //       // use from to convert Promise to observable so we can use pipe to transform data
+  //       return from(this.AngularFireAUth.signInWithEmailAndPassword(authData.payload.email, authData.payload.password)).pipe(
+  //         map((returnResult) => {
+  //           // we get refresh token here
+  //           console.log(returnResult.user.refreshToken);
+  //           myRefreshToken = returnResult.user.refreshToken;
+  //           // we get id token here
+  //           returnResult.user.getIdToken().then(function(idToken) {
+  //             console.log('is token is ' + idToken);
+  //             myIdToken = idToken;
+  //             console.log('Id token is ' + myIdToken);
+  //             const myUser1 = new User(authData.payload.email, null, myIdToken, myRefreshToken, null);
+  //             // return (new AuthActions.SignInSuccess(myUser1));
+  //             // return new AuthActions.SignInSuccess(myUser1);
+  //           });
+  //           // return new AuthActions.SignInFail('Success');
+  //           // console.log('Id token is ' + myIdToken);
+  //           // const myUser = new User(authData.payload.email, null, myIdToken, myRefreshToken, null);
+  //           // return new AuthActions.SignInSuccess(myUser);
+  //         } ),
+  //         catchError(errorResp => {
+  //           console.log(errorResp);
+  //           return of(new AuthActions.SignInFail(errorResp.message));
+  //         } )
+  //       );
+  //     }
+  //   )
+  // );
 
 
 

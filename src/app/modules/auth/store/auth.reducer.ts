@@ -1,6 +1,8 @@
 import * as AuthActions from './auth.actions';
 import {User} from '../../../Models/user.model';
 import {Action} from '@ngrx/store';
+import {SIGNINSUCCESS} from './auth.actions';
+import {act} from '@ngrx/effects';
 
 export interface State {
   user: User;
@@ -40,15 +42,19 @@ export function authReducer(
       };
     case AuthActions.SIGNIN:
       return {
-        ...state,
-        user: null,
-        authError: null
+        ...state
       };
     case AuthActions.SIGNINFAIL:
       return {
         ...state,
-        user: null,
         authSignInError: action.payload
+      };
+    case AuthActions.SIGNINSUCCESS:
+
+      return {
+        ...state,
+        user: action.payload
+        // authSignInError: action.payload
       };
     default:
       return state;
