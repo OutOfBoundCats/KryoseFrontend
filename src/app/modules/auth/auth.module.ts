@@ -12,6 +12,7 @@ import {environment} from '../../../environments/environment';
 import {AngularFirestoreModule} from '@angular/fire/firestore';
 import {EffectsModule} from '@ngrx/effects';
 import {AuthEffects} from './store/auth.effects';
+import {AuthService} from '../../services/security/auth.service';
 
 
 
@@ -36,6 +37,9 @@ import {AuthEffects} from './store/auth.effects';
     AngularFireDatabaseModule,
     AngularFirestoreModule,
     EffectsModule.forFeature([AuthEffects])
+  ],
+  providers: [
+    AuthService
   ]
 })
 export class AuthModule {}

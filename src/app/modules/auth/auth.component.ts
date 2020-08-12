@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {AuthService} from '../../services/security/auth.service';
 
 
 
@@ -12,9 +13,10 @@ import { Component, OnInit } from '@angular/core';
 
 export class AuthComponent implements OnInit {
 
-  constructor() { }
+  constructor(private MyAuthService: AuthService) { }
 
   ngOnInit(): void{
+    this.MyAuthService.autoLogin();
   }
 
 }
