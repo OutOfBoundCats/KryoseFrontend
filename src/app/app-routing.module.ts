@@ -8,7 +8,7 @@ import { MatSliderModule } from '@angular/material/slider';
 
 
 const appRoutes: Routes = [
-  { path: '', redirectTo: '/auth', pathMatch: 'full' },
+  { path: '', redirectTo: '/auth/signin', pathMatch: 'full' },
   {
     path: 'auth',
     loadChildren: () => AuthModule

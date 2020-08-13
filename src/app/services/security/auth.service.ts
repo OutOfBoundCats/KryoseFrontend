@@ -47,7 +47,7 @@ export class AuthService {
   }
   // tslint:disable-next-line:typedef
   autoLogin(){
-    const StoredUserData:{
+    const StoredUserData: {
        email: string,
        id: string,
        idtoken: string,

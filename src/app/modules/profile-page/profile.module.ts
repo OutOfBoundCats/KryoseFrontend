@@ -3,15 +3,22 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import {ProfilePageComponent} from './profile-page.component';
+import {SidebarComponent} from '../../components/shared/sidebar/sidebar.component';
+import {NavbarComponent} from '../../components/shared/navbar/navbar.component';
+import {AuthGaurd} from '../auth/auth.guard';
 
 
 
 
 
 @NgModule({
-  declarations: [ProfilePageComponent],
+  declarations: [
+    ProfilePageComponent,
+    SidebarComponent,
+    NavbarComponent
+  ],
   imports: [
-    RouterModule.forChild([{ path: '', component: ProfilePageComponent }])
+    RouterModule.forChild([{ path: '', component: ProfilePageComponent, canActivate: [AuthGaurd], }])
   ]
 })
 export class ProfileModule {}
