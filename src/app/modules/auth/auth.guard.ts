@@ -47,6 +47,7 @@ export class AuthGaurd implements CanActivate{
      const CurrentTime = new Date().getTime();
      if (!StoredUserData){
       return this.router.createUrlTree(['/auth/signin']);
+      //  return this.router.navigate(['/auth']);
     }else if ( myUser.token && CurrentTime < (new Date(StoredUserData.tokenExpirationDate).getTime() ) ){
       return true;
     }

@@ -38,6 +38,7 @@ export class AuthService {
         this.myUser = new User(email, this.uid, this.myIdToken, this.myRefreshToken, this.expirationTime);
         localStorage.setItem('userData', JSON.stringify(this.myUser));
         this.store.dispatch(new AuthActions.SignInSuccess(this.myUser));
+        this.router.navigate(['/dashboard']);
       }
     ).catch(
       (error) => {

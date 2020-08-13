@@ -24,8 +24,7 @@ const appRoutes: Routes = [
   },
   {
     path: 'videotext',
-    loadChildren: () => VideoTextModule,
-    canActivate: [AuthGaurd]
+    loadChildren: () => VideoTextModule
   }
 
 ];
