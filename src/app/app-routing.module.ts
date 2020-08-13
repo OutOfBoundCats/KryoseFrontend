@@ -5,6 +5,7 @@ import {ProfileModule} from './modules/profile-page/profile.module';
 import {LoggerModule} from './modules/logger/logger.module';
 import {VideoTextModule} from './modules/video-text/video-text.module';
 import { MatSliderModule } from '@angular/material/slider';
+import {AuthGaurd} from './modules/auth/auth.guard';
 
 
 const appRoutes: Routes = [
@@ -23,7 +24,8 @@ const appRoutes: Routes = [
   },
   {
     path: 'videotext',
-    loadChildren: () => VideoTextModule
+    loadChildren: () => VideoTextModule,
+    canActivate: [AuthGaurd]
   }
 
 ];

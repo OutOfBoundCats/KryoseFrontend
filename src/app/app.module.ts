@@ -12,9 +12,10 @@ import * as fromApp from '../app/ReduxStore/app.reducer';
 import {StoreModule} from '@ngrx/store';
 import {EffectsModule} from '@ngrx/effects';
 import {AuthEffects} from './modules/auth/store/auth.effects';
-import {HttpClientModule} from '@angular/common/http';
+import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import {StoreDevtoolsModule} from '@ngrx/store-devtools';
 import {environment} from '../environments/environment';
+import {AuthInterceptorService} from './modules/auth/auth-interceptor.service';
 
 
 
@@ -33,7 +34,11 @@ import {environment} from '../environments/environment';
         StoreDevtoolsModule.instrument({ logOnly: environment.production }),
         EffectsModule.forRoot()
     ],
-    providers: [],
+    providers: [{
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptorService,
+      multi: true
+    }],
     exports: [
     ],
     bootstrap: [AppComponent]
