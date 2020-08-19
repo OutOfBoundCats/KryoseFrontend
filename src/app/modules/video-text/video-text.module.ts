@@ -7,6 +7,7 @@ import {VideoTextComponent} from './video-text.component';
 import {MatSliderModule} from '@angular/material/slider';
 import {TexteditorComponent} from '../../components/texteditor/texteditor.component';
 import {VideoEditorComponent} from '../../components/video-editor/video-editor.component';
+import {ProfileModule} from '../profile-page/profile.module';
 
 
 
@@ -24,7 +25,8 @@ import {VideoEditorComponent} from '../../components/video-editor/video-editor.c
     CommonModule,
     FormsModule,
     RouterModule.forChild([{path: '', component: VideoTextComponent}]),
-    MatSliderModule
+    MatSliderModule,
+    ProfileModule
 
   ]
 })

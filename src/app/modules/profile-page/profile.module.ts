@@ -17,8 +17,11 @@ import {AuthGaurd} from '../auth/auth.guard';
     SidebarComponent,
     NavbarComponent
   ],
+  exports: [
+    NavbarComponent
+  ],
   imports: [
-    RouterModule.forChild([{ path: '', component: ProfilePageComponent, canActivate: [AuthGaurd], }])
+    RouterModule.forChild([{path: '', component: ProfilePageComponent, canActivate: [AuthGaurd],}])
   ]
 })
 export class ProfileModule {}
