@@ -7,6 +7,8 @@ import {VideoTextModule} from './modules/video-text/video-text.module';
 import { MatSliderModule } from '@angular/material/slider';
 import {AuthGaurd} from './modules/auth/auth.guard';
 
+import {TextAudioModule} from './modules/text-audio/text-audio.module';
+
 
 const appRoutes: Routes = [
   { path: '', redirectTo: '/auth/signin', pathMatch: 'full' },
@@ -25,6 +27,10 @@ const appRoutes: Routes = [
   {
     path: 'videotext',
     loadChildren: () => VideoTextModule
+  },
+  {
+    path: 'convertaudio',
+    loadChildren: () => TextAudioModule
   }
 
 ];

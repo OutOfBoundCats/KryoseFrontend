@@ -1,0 +1,56 @@
+:root {
+  --main-radius: 50px;
+  --main-padding: 5px;
+}
+.wrapper{
+  padding: 10px 20px ;
+  display: grid;
+  width: 100%;
+  height: 30vh;
+  grid-template-columns: auto auto auto ;
+  grid-template-rows: 1fr 1fr 1fr ;
+  grid-template-areas:
+    "Profile CurrentPlan CurrentCredit"
+    "Profile CurrentPlan CurrentCredit"
+    "Profile CurrentPlan CurrentCredit";
+  grid-gap: 0.2rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 12px;
+  color: #004d40;
+  text-align: center;
+
+}
+.Profile{
+  background: #6fffd2;
+  grid-area: Profile;
+  border-radius: 15px;
+  padding-top: var(--main-padding);
+
+}
+.CurrentPlan{
+  background: #64ffda;
+  grid-area: CurrentPlan;
+  border-radius: 15px;
+  padding-top: var(--main-padding);
+}
+.CurrentCredit{
+  background: #73ffba;
+  grid-area: CurrentCredit;
+  border-radius: 15px;
+  padding-top: var(--main-padding);
+}
+@media only screen and (max-width: 550px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.4fr 0.4fr 2.2fr 1.2fr 1.2fr 1.2fr 1fr;
+    grid-template-areas:
+      "nav"
+      "sidebar"
+      "main"
+      "content1"
+      "content2"
+      "content3"
+      "footer";
+  }
+}

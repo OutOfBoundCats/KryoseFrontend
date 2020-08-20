@@ -6,6 +6,7 @@ import {ProfilePageComponent} from './profile-page.component';
 import {SidebarComponent} from '../../components/shared/sidebar/sidebar.component';
 import {NavbarComponent} from '../../components/shared/navbar/navbar.component';
 import {AuthGaurd} from '../auth/auth.guard';
+import {SharedModule} from '../../components/shared/shared.module';
 
 
 
@@ -14,14 +15,12 @@ import {AuthGaurd} from '../auth/auth.guard';
 @NgModule({
   declarations: [
     ProfilePageComponent,
-    SidebarComponent,
-    NavbarComponent
   ],
   exports: [
-    NavbarComponent
   ],
   imports: [
-    RouterModule.forChild([{path: '', component: ProfilePageComponent, canActivate: [AuthGaurd],}])
+    RouterModule.forChild([{path: '', component: ProfilePageComponent, canActivate: [AuthGaurd] }]),
+    SharedModule
   ]
 })
 export class ProfileModule {}
