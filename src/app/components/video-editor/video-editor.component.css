@@ -1,0 +1,46 @@
+
+.mycontainer{
+  padding: 10px 20px ;
+  display: grid;
+  width: 100%;
+  height: 80vh;
+  grid-template-columns: 0.5fr 0.5fr 0.5fr;
+  grid-template-rows: 0.5fr 0.5fr 1fr ;
+  grid-template-areas:
+    "videoplayer transacript transacript"
+    "videoplayer transacript transacript"
+    ". transacript transacript";
+  grid-gap: 0.2rem;
+  font-weight: 800;
+  font-size: 16px;
+  color: #042331;
+}
+
+.videoplayer{
+  background: #6fffd2;
+  grid-area: videoplayer;
+  border-radius: 15px;
+  text-align: center;
+  position: relative;
+}
+
+.transacriptContainer{
+  background: #6fffd2;
+  grid-area: transacript;
+  border-radius: 15px;
+  padding-top: var(--main-padding);
+  display: inline-block;
+
+}
+
+.transacript {
+  height: 95%;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  margin: 1rem;
+  padding: 1rem;
+  scroll-behavior: initial;
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+  overflow-y: auto;
+  background: #1b9bff;
+
+}
