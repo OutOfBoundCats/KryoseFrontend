@@ -1,0 +1,1839 @@
+results {
+  alternatives {
+    transcript: "but what if somebody decides to break it be careful that you keep adequate coverage but look for places to save money baby it\'s taking longer to get things squared away then the bankers expected hiring the life for one\'s company may win her tax aided retirement income the booth just helpful but inadequate new self to saving Rags or hardly tossed on the two naked bones what it discussion Canyon Sue when the title of this type of song is in question there\'s no dying or waxing or gassing need a paperweight maybe personalized known back Quoc Leigh is leather hard place work on a flat surface and smooth out this simplest kind of separate system uses a single self-contained unit to the old shop outage still Holts a good mechanic is usually a bad boss so fingers would go higher in later years so make beautiful chairs cabinets chest doll houses it\'s at"
+    confidence: 0.6881865
+    words {
+      start_time {
+      }
+      end_time {
+        nanos: 200000000
+      }
+      word: "but"
+      confidence: 0.53119344
+    }
+    words {
+      start_time {
+        nanos: 200000000
+      }
+      end_time {
+        nanos: 400000000
+      }
+      word: "what"
+      confidence: 0.83758235
+    }
+    words {
+      start_time {
+        nanos: 400000000
+      }
+      end_time {
+        nanos: 500000000
+      }
+      word: "if"
+      confidence: 0.6572063
+    }
+    words {
+      start_time {
+        nanos: 500000000
+      }
+      end_time {
+        nanos: 800000000
+      }
+      word: "somebody"
+      confidence: 0.60869694
+    }
+    words {
+      start_time {
+        nanos: 800000000
+      }
+      end_time {
+        seconds: 1
+        nanos: 400000000
+      }
+      word: "decides"
+      confidence: 0.83758235
+    }
+    words {
+      start_time {
+        seconds: 1
+        nanos: 400000000
+      }
+      end_time {
+        seconds: 1
+        nanos: 500000000
+      }
+      word: "to"
+      confidence: 0.8281349
+    }
+    words {
+      start_time {
+        seconds: 1
+        nanos: 500000000
+      }
+      end_time {
+        seconds: 1
+        nanos: 800000000
+      }
+      word: "break"
+      confidence: 0.8355513
+    }
+    words {
+      start_time {
+        seconds: 1
+        nanos: 800000000
+      }
+      end_time {
+        seconds: 1
+        nanos: 900000000
+      }
+      word: "it"
+      confidence: 0.54221076
+    }
+    words {
+      start_time {
+        seconds: 1
+        nanos: 900000000
+      }
+      end_time {
+        seconds: 2
+        nanos: 100000000
+      }
+      word: "be"
+      confidence: 0.83758235
+    }
+    words {
+      start_time {
+        seconds: 2
+        nanos: 100000000
+      }
+      end_time {
+        seconds: 2
+        nanos: 400000000
+      }
+      word: "careful"
+      confidence: 0.83758235
+    }
+    words {
+      start_time {
+        seconds: 2
+        nanos: 400000000
+      }
+      end_time {
+        seconds: 2
+        nanos: 700000000
+      }
+      word: "that"
+      confidence: 0.8307742
+    }
+    words {
+      start_time {
+        seconds: 2
+        nanos: 700000000
+      }
+      end_time {
+        seconds: 2
+        nanos: 800000000
+      }
+      word: "you"
+      confidence: 0.83758235
+    }
+    words {
+      start_time {
+        seconds: 2
+        nanos: 800000000
+      }
+      end_time {
+        seconds: 3
+      }
+      word: "keep"
+      confidence: 0.83758235
+    }
+    words {
+      start_time {
+        seconds: 3
+      }
+      end_time {
+        seconds: 3
+        nanos: 500000000
+      }
+      word: "adequate"
+      confidence: 0.624445
+    }
+    words {
+      start_time {
+        seconds: 3
+        nanos: 500000000
+      }
+      end_time {
+        seconds: 4
+        nanos: 100000000
+      }
+      word: "coverage"
+      confidence: 0.83758235
+    }
+    words {
+      start_time {
+        seconds: 4
+        nanos: 100000000
+      }
+      end_time {
+        seconds: 4
+        nanos: 500000000
+      }
+      word: "but"
+      confidence: 0.5906363
+    }
+    words {
+      start_time {
+        seconds: 4
+        nanos: 500000000
+      }
+      end_time {
+        seconds: 4
+        nanos: 700000000
+      }
+      word: "look"
+      confidence: 0.6022792
+    }
+    words {
+      start_time {
+        seconds: 4
+        nanos: 700000000
+      }
+      end_time {
+        seconds: 4
+        nanos: 900000000
+      }
+      word: "for"
+      confidence: 0.83758235
+    }
+    words {
+      start_time {
+        seconds: 4
+        nanos: 900000000
+      }
+      end_time {
+        seconds: 5
+        nanos: 100000000
+      }
+      word: "places"
+      confidence: 0.83758235
+    }
+    words {
+      start_time {
+        seconds: 5
+        nanos: 100000000
+      }
+      end_time {
+        seconds: 5
+        nanos: 400000000
+      }
+      word: "to"
+      confidence: 0.83758235
+    }
+    words {
+      start_time {
+        seconds: 5
+        nanos: 400000000
+      }
+      end_time {
+        seconds: 5
+        nanos: 800000000
+      }
+      word: "save"
+      confidence: 0.83758235
+    }
+    words {
+      start_time {
+        seconds: 5
+        nanos: 800000000
+      }
+      end_time {
+        seconds: 6
+        nanos: 100000000
+      }
+      word: "money"
+      confidence: 0.83758235
+    }
+    words {
+      start_time {
+        seconds: 6
+        nanos: 100000000
+      }
+      end_time {
+        seconds: 6
+        nanos: 500000000
+      }
+      word: "baby"
+      confidence: 0.53697014
+    }
+    words {
+      start_time {
+        seconds: 6
+        nanos: 500000000
+      }
+      end_time {
+        seconds: 6
+        nanos: 800000000
+      }
+      word: "it\'s"
+      confidence: 0.7575869
+    }
+    words {
+      start_time {
+        seconds: 6
+        nanos: 800000000
+      }
+      end_time {
+        seconds: 7
+        nanos: 200000000
+      }
+      word: "taking"
+      confidence: 0.55243754
+    }
+    words {
+      start_time {
+        seconds: 7
+        nanos: 200000000
+      }
+      end_time {
+        seconds: 7
+        nanos: 700000000
+      }
+      word: "longer"
+      confidence: 0.83758235
+    }
+    words {
+      start_time {
+        seconds: 7
+        nanos: 700000000
+      }
+      end_time {
+        seconds: 7
+        nanos: 800000000
+      }
+      word: "to"
+      confidence: 0.83758235
+    }
+    words {
+      start_time {
+        seconds: 7
+        nanos: 800000000
+      }
+      end_time {
+        seconds: 8
+        nanos: 100000000
+      }
+      word: "get"
+      confidence: 0.83758235
+    }
+    words {
+      start_time {
+        seconds: 8
+        nanos: 100000000
+      }
+      end_time {
+        seconds: 8
+        nanos: 400000000
+      }
+      word: "things"
+      confidence: 0.83758235
+    }
+    words {
+      start_time {
+        seconds: 8
+        nanos: 400000000
+      }
+      end_time {
+        seconds: 8
+        nanos: 900000000
+      }
+      word: "squared"
+      confidence: 0.83758235
+    }
+    words {
+      start_time {
+        seconds: 8
+        nanos: 900000000
+      }
+      end_time {
+        seconds: 9
+        nanos: 200000000
+      }
+      word: "away"
+      confidence: 0.83758235
+    }
+    words {
+      start_time {
+        seconds: 9
+        nanos: 200000000
+      }
+      end_time {
+        seconds: 9
+        nanos: 800000000
+      }
+      word: "then"
+      confidence: 0.61624324
+    }
+    words {
+      start_time {
+        seconds: 9
+        nanos: 800000000
+      }
+      end_time {
+        seconds: 9
+        nanos: 900000000
+      }
+      word: "the"
+      confidence: 0.83758235
+    }
+    words {
+      start_time {
+        seconds: 9
+        nanos: 900000000
+      }
+      end_time {
+        seconds: 10
+        nanos: 400000000
+      }
+      word: "bankers"
+      confidence: 0.6074484
+    }
+    words {
+      start_time {
+        seconds: 10
+        nanos: 400000000
+      }
+      end_time {
+        seconds: 11
+        nanos: 100000000
+      }
+      word: "expected"
+      confidence: 0.82876754
+    }
+    words {
+      start_time {
+        seconds: 11
+        nanos: 100000000
+      }
+      end_time {
+        seconds: 11
+        nanos: 500000000
+      }
+      word: "hiring"
+      confidence: 0.62226814
+    }
+    words {
+      start_time {
+        seconds: 11
+        nanos: 500000000
+      }
+      end_time {
+        seconds: 11
+        nanos: 600000000
+      }
+      word: "the"
+      confidence: 0.6732298
+    }
+    words {
+      start_time {
+        seconds: 11
+        nanos: 600000000
+      }
+      end_time {
+        seconds: 11
+        nanos: 900000000
+      }
+      word: "life"
+      confidence: 0.51581204
+    }
+    words {
+      start_time {
+        seconds: 11
+        nanos: 900000000
+      }
+      end_time {
+        seconds: 12
+        nanos: 100000000
+      }
+      word: "for"
+      confidence: 0.5284434
+    }
+    words {
+      start_time {
+        seconds: 12
+        nanos: 100000000
+      }
+      end_time {
+        seconds: 12
+        nanos: 200000000
+      }
+      word: "one\'s"
+      confidence: 0.5255038
+    }
+    words {
+      start_time {
+        seconds: 12
+        nanos: 200000000
+      }
+      end_time {
+        seconds: 12
+        nanos: 900000000
+      }
+      word: "company"
+      confidence: 0.54561275
+    }
+    words {
+      start_time {
+        seconds: 12
+        nanos: 900000000
+      }
+      end_time {
+        seconds: 13
+        nanos: 100000000
+      }
+      word: "may"
+      confidence: 0.5396286
+    }
+    words {
+      start_time {
+        seconds: 13
+        nanos: 100000000
+      }
+      end_time {
+        seconds: 13
+        nanos: 300000000
+      }
+      word: "win"
+      confidence: 0.52836525
+    }
+    words {
+      start_time {
+        seconds: 13
+        nanos: 300000000
+      }
+      end_time {
+        seconds: 13
+        nanos: 500000000
+      }
+      word: "her"
+      confidence: 0.82526946
+    }
+    words {
+      start_time {
+        seconds: 13
+        nanos: 500000000
+      }
+      end_time {
+        seconds: 13
+        nanos: 900000000
+      }
+      word: "tax"
+      confidence: 0.626207
+    }
+    words {
+      start_time {
+        seconds: 13
+        nanos: 900000000
+      }
+      end_time {
+        seconds: 14
+        nanos: 300000000
+      }
+      word: "aided"
+      confidence: 0.51581204
+    }
+    words {
+      start_time {
+        seconds: 14
+        nanos: 300000000
+      }
+      end_time {
+        seconds: 14
+        nanos: 900000000
+      }
+      word: "retirement"
+      confidence: 0.75498635
+    }
+    words {
+      start_time {
+        seconds: 14
+        nanos: 900000000
+      }
+      end_time {
+        seconds: 15
+        nanos: 300000000
+      }
+      word: "income"
+      confidence: 0.7383162
+    }
+    words {
+      start_time {
+        seconds: 15
+        nanos: 300000000
+      }
+      end_time {
+        seconds: 15
+        nanos: 500000000
+      }
+      word: "the"
+      confidence: 0.5472244
+    }
+    words {
+      start_time {
+        seconds: 15
+        nanos: 500000000
+      }
+      end_time {
+        seconds: 15
+        nanos: 700000000
+      }
+      word: "booth"
+      confidence: 0.5241365
+    }
+    words {
+      start_time {
+        seconds: 15
+        nanos: 700000000
+      }
+      end_time {
+        seconds: 16
+      }
+      word: "just"
+      confidence: 0.5382635
+    }
+    words {
+      start_time {
+        seconds: 16
+      }
+      end_time {
+        seconds: 16
+        nanos: 400000000
+      }
+      word: "helpful"
+      confidence: 0.5500671
+    }
+    words {
+      start_time {
+        seconds: 16
+        nanos: 400000000
+      }
+      end_time {
+        seconds: 16
+        nanos: 900000000
+      }
+      word: "but"
+      confidence: 0.5843859
+    }
+    words {
+      start_time {
+        seconds: 16
+        nanos: 900000000
+      }
+      end_time {
+        seconds: 17
+        nanos: 100000000
+      }
+      word: "inadequate"
+      confidence: 0.6117064
+    }
+    words {
+      start_time {
+        seconds: 17
+        nanos: 100000000
+      }
+      end_time {
+        seconds: 17
+        nanos: 700000000
+      }
+      word: "new"
+      confidence: 0.6492491
+    }
+    words {
+      start_time {
+        seconds: 17
+        nanos: 700000000
+      }
+      end_time {
+        seconds: 18
+        nanos: 100000000
+      }
+      word: "self"
+      confidence: 0.5846085
+    }
+    words {
+      start_time {
+        seconds: 18
+        nanos: 100000000
+      }
+      end_time {
+        seconds: 18
+        nanos: 300000000
+      }
+      word: "to"
+      confidence: 0.56993467
+    }
+    words {
+      start_time {
+        seconds: 18
+        nanos: 300000000
+      }
+      end_time {
+        seconds: 18
+        nanos: 600000000
+      }
+      word: "saving"
+      confidence: 0.56961685
+    }
+    words {
+      start_time {
+        seconds: 18
+        nanos: 600000000
+      }
+      end_time {
+        seconds: 19
+        nanos: 100000000
+      }
+      word: "Rags"
+      confidence: 0.5966572
+    }
+    words {
+      start_time {
+        seconds: 19
+        nanos: 100000000
+      }
+      end_time {
+        seconds: 19
+        nanos: 200000000
+      }
+      word: "or"
+      confidence: 0.6096744
+    }
+    words {
+      start_time {
+        seconds: 19
+        nanos: 200000000
+      }
+      end_time {
+        seconds: 19
+        nanos: 600000000
+      }
+      word: "hardly"
+      confidence: 0.51581204
+    }
+    words {
+      start_time {
+        seconds: 19
+        nanos: 600000000
+      }
+      end_time {
+        seconds: 20
+        nanos: 300000000
+      }
+      word: "tossed"
+      confidence: 0.5499002
+    }
+    words {
+      start_time {
+        seconds: 20
+        nanos: 300000000
+      }
+      end_time {
+        seconds: 20
+        nanos: 400000000
+      }
+      word: "on"
+      confidence: 0.83758235
+    }
+    words {
+      start_time {
+        seconds: 20
+        nanos: 400000000
+      }
+      end_time {
+        seconds: 20
+        nanos: 500000000
+      }
+      word: "the"
+      confidence: 0.66984093
+    }
+    words {
+      start_time {
+        seconds: 20
+        nanos: 500000000
+      }
+      end_time {
+        seconds: 20
+        nanos: 700000000
+      }
+      word: "two"
+      confidence: 0.53550726
+    }
+    words {
+      start_time {
+        seconds: 20
+        nanos: 700000000
+      }
+      end_time {
+        seconds: 21
+        nanos: 100000000
+      }
+      word: "naked"
+      confidence: 0.8320255
+    }
+    words {
+      start_time {
+        seconds: 21
+        nanos: 100000000
+      }
+      end_time {
+        seconds: 21
+        nanos: 700000000
+      }
+      word: "bones"
+      confidence: 0.61925584
+    }
+    words {
+      start_time {
+        seconds: 21
+        nanos: 700000000
+      }
+      end_time {
+        seconds: 22
+      }
+      word: "what"
+      confidence: 0.6606416
+    }
+    words {
+      start_time {
+        seconds: 22
+      }
+      end_time {
+        seconds: 22
+        nanos: 100000000
+      }
+      word: "it"
+      confidence: 0.75963205
+    }
+    words {
+      start_time {
+        seconds: 22
+        nanos: 100000000
+      }
+      end_time {
+        seconds: 22
+        nanos: 400000000
+      }
+      word: "discussion"
+      confidence: 0.83758235
+    }
+    words {
+      start_time {
+        seconds: 22
+        nanos: 400000000
+      }
+      end_time {
+        seconds: 23
+      }
+      word: "Canyon"
+      confidence: 0.54028577
+    }
+    words {
+      start_time {
+        seconds: 23
+      }
+      end_time {
+        seconds: 23
+        nanos: 200000000
+      }
+      word: "Sue"
+      confidence: 0.51615363
+    }
+    words {
+      start_time {
+        seconds: 23
+        nanos: 200000000
+      }
+      end_time {
+        seconds: 23
+        nanos: 600000000
+      }
+      word: "when"
+      confidence: 0.6566657
+    }
+    words {
+      start_time {
+        seconds: 23
+        nanos: 600000000
+      }
+      end_time {
+        seconds: 23
+        nanos: 700000000
+      }
+      word: "the"
+      confidence: 0.83758235
+    }
+    words {
+      start_time {
+        seconds: 23
+        nanos: 700000000
+      }
+      end_time {
+        seconds: 24
+        nanos: 100000000
+      }
+      word: "title"
+      confidence: 0.836358
+    }
+    words {
+      start_time {
+        seconds: 24
+        nanos: 100000000
+      }
+      end_time {
+        seconds: 24
+        nanos: 200000000
+      }
+      word: "of"
+      confidence: 0.83758235
+    }
+    words {
+      start_time {
+        seconds: 24
+        nanos: 200000000
+      }
+      end_time {
+        seconds: 24
+        nanos: 300000000
+      }
+      word: "this"
+      confidence: 0.83758235
+    }
+    words {
+      start_time {
+        seconds: 24
+        nanos: 300000000
+      }
+      end_time {
+        seconds: 24
+        nanos: 600000000
+      }
+      word: "type"
+      confidence: 0.83758235
+    }
+    words {
+      start_time {
+        seconds: 24
+        nanos: 600000000
+      }
+      end_time {
+        seconds: 24
+        nanos: 800000000
+      }
+      word: "of"
+      confidence: 0.83758235
+    }
+    words {
+      start_time {
+        seconds: 24
+        nanos: 800000000
+      }
+      end_time {
+        seconds: 25
+        nanos: 100000000
+      }
+      word: "song"
+      confidence: 0.83758235
+    }
+    words {
+      start_time {
+        seconds: 25
+        nanos: 100000000
+      }
+      end_time {
+        seconds: 25
+        nanos: 500000000
+      }
+      word: "is"
+      confidence: 0.83758235
+    }
+    words {
+      start_time {
+        seconds: 25
+        nanos: 500000000
+      }
+      end_time {
+        seconds: 25
+        nanos: 600000000
+      }
+      word: "in"
+      confidence: 0.6732883
+    }
+    words {
+      start_time {
+        seconds: 25
+        nanos: 600000000
+      }
+      end_time {
+        seconds: 25
+        nanos: 800000000
+      }
+      word: "question"
+      confidence: 0.6511095
+    }
+    words {
+      start_time {
+        seconds: 25
+        nanos: 800000000
+      }
+      end_time {
+        seconds: 26
+        nanos: 300000000
+      }
+      word: "there\'s"
+      confidence: 0.62096876
+    }
+    words {
+      start_time {
+        seconds: 26
+        nanos: 300000000
+      }
+      end_time {
+        seconds: 26
+        nanos: 400000000
+      }
+      word: "no"
+      confidence: 0.6105655
+    }
+    words {
+      start_time {
+        seconds: 26
+        nanos: 400000000
+      }
+      end_time {
+        seconds: 26
+        nanos: 900000000
+      }
+      word: "dying"
+      confidence: 0.83758235
+    }
+    words {
+      start_time {
+        seconds: 26
+        nanos: 900000000
+      }
+      end_time {
+        seconds: 27
+      }
+      word: "or"
+      confidence: 0.83758235
+    }
+    words {
+      start_time {
+        seconds: 27
+      }
+      end_time {
+        seconds: 27
+        nanos: 500000000
+      }
+      word: "waxing"
+      confidence: 0.83758235
+    }
+    words {
+      start_time {
+        seconds: 27
+        nanos: 500000000
+      }
+      end_time {
+        seconds: 27
+        nanos: 700000000
+      }
+      word: "or"
+      confidence: 0.7545275
+    }
+    words {
+      start_time {
+        seconds: 27
+        nanos: 700000000
+      }
+      end_time {
+        seconds: 28
+        nanos: 200000000
+      }
+      word: "gassing"
+      confidence: 0.6401933
+    }
+    words {
+      start_time {
+        seconds: 28
+        nanos: 200000000
+      }
+      end_time {
+        seconds: 28
+        nanos: 400000000
+      }
+      word: "need"
+      confidence: 0.53782654
+    }
+    words {
+      start_time {
+        seconds: 28
+        nanos: 400000000
+      }
+      end_time {
+        seconds: 28
+        nanos: 500000000
+      }
+      word: "a"
+      confidence: 0.5368126
+    }
+    words {
+      start_time {
+        seconds: 28
+        nanos: 500000000
+      }
+      end_time {
+        seconds: 29
+      }
+      word: "paperweight"
+      confidence: 0.5607981
+    }
+    words {
+      start_time {
+        seconds: 29
+      }
+      end_time {
+        seconds: 29
+        nanos: 500000000
+      }
+      word: "maybe"
+      confidence: 0.5864704
+    }
+    words {
+      start_time {
+        seconds: 29
+        nanos: 500000000
+      }
+      end_time {
+        seconds: 30
+        nanos: 200000000
+      }
+      word: "personalized"
+      confidence: 0.54497457
+    }
+    words {
+      start_time {
+        seconds: 30
+        nanos: 200000000
+      }
+      end_time {
+        seconds: 30
+        nanos: 500000000
+      }
+      word: "known"
+      confidence: 0.5378831
+    }
+    words {
+      start_time {
+        seconds: 30
+        nanos: 500000000
+      }
+      end_time {
+        seconds: 30
+        nanos: 800000000
+      }
+      word: "back"
+      confidence: 0.60595936
+    }
+    words {
+      start_time {
+        seconds: 30
+        nanos: 800000000
+      }
+      end_time {
+        seconds: 31
+        nanos: 100000000
+      }
+      word: "Quoc"
+      confidence: 0.5272579
+    }
+    words {
+      start_time {
+        seconds: 31
+        nanos: 100000000
+      }
+      end_time {
+        seconds: 31
+        nanos: 400000000
+      }
+      word: "Leigh"
+      confidence: 0.5272579
+    }
+    words {
+      start_time {
+        seconds: 31
+        nanos: 400000000
+      }
+      end_time {
+        seconds: 31
+        nanos: 600000000
+      }
+      word: "is"
+      confidence: 0.51581204
+    }
+    words {
+      start_time {
+        seconds: 31
+        nanos: 600000000
+      }
+      end_time {
+        seconds: 32
+      }
+      word: "leather"
+      confidence: 0.5269254
+    }
+    words {
+      start_time {
+        seconds: 32
+      }
+      end_time {
+        seconds: 32
+        nanos: 300000000
+      }
+      word: "hard"
+      confidence: 0.609435
+    }
+    words {
+      start_time {
+        seconds: 32
+        nanos: 300000000
+      }
+      end_time {
+        seconds: 32
+        nanos: 600000000
+      }
+      word: "place"
+      confidence: 0.6091784
+    }
+    words {
+      start_time {
+        seconds: 32
+        nanos: 600000000
+      }
+      end_time {
+        seconds: 32
+        nanos: 900000000
+      }
+      word: "work"
+      confidence: 0.7581606
+    }
+    words {
+      start_time {
+        seconds: 32
+        nanos: 900000000
+      }
+      end_time {
+        seconds: 33
+        nanos: 200000000
+      }
+      word: "on"
+      confidence: 0.6266674
+    }
+    words {
+      start_time {
+        seconds: 33
+        nanos: 200000000
+      }
+      end_time {
+        seconds: 33
+        nanos: 300000000
+      }
+      word: "a"
+      confidence: 0.83758235
+    }
+    words {
+      start_time {
+        seconds: 33
+        nanos: 300000000
+      }
+      end_time {
+        seconds: 33
+        nanos: 600000000
+      }
+      word: "flat"
+      confidence: 0.83758235
+    }
+    words {
+      start_time {
+        seconds: 33
+        nanos: 600000000
+      }
+      end_time {
+        seconds: 33
+        nanos: 700000000
+      }
+      word: "surface"
+      confidence: 0.83758235
+    }
+    words {
+      start_time {
+        seconds: 33
+        nanos: 700000000
+      }
+      end_time {
+        seconds: 34
+        nanos: 500000000
+      }
+      word: "and"
+      confidence: 0.651951
+    }
+    words {
+      start_time {
+        seconds: 34
+        nanos: 500000000
+      }
+      end_time {
+        seconds: 34
+        nanos: 800000000
+      }
+      word: "smooth"
+      confidence: 0.6403395
+    }
+    words {
+      start_time {
+        seconds: 34
+        nanos: 800000000
+      }
+      end_time {
+        seconds: 35
+      }
+      word: "out"
+      confidence: 0.6273351
+    }
+    words {
+      start_time {
+        seconds: 35
+      }
+      end_time {
+        seconds: 35
+        nanos: 400000000
+      }
+      word: "this"
+      confidence: 0.63457555
+    }
+    words {
+      start_time {
+        seconds: 35
+        nanos: 400000000
+      }
+      end_time {
+        seconds: 35
+        nanos: 800000000
+      }
+      word: "simplest"
+      confidence: 0.758963
+    }
+    words {
+      start_time {
+        seconds: 35
+        nanos: 800000000
+      }
+      end_time {
+        seconds: 36
+        nanos: 400000000
+      }
+      word: "kind"
+      confidence: 0.83758235
+    }
+    words {
+      start_time {
+        seconds: 36
+        nanos: 400000000
+      }
+      end_time {
+        seconds: 36
+        nanos: 500000000
+      }
+      word: "of"
+      confidence: 0.83758235
+    }
+    words {
+      start_time {
+        seconds: 36
+        nanos: 500000000
+      }
+      end_time {
+        seconds: 36
+        nanos: 900000000
+      }
+      word: "separate"
+      confidence: 0.83758235
+    }
+    words {
+      start_time {
+        seconds: 36
+        nanos: 900000000
+      }
+      end_time {
+        seconds: 37
+        nanos: 200000000
+      }
+      word: "system"
+      confidence: 0.83758235
+    }
+    words {
+      start_time {
+        seconds: 37
+        nanos: 200000000
+      }
+      end_time {
+        seconds: 37
+        nanos: 900000000
+      }
+      word: "uses"
+      confidence: 0.7605399
+    }
+    words {
+      start_time {
+        seconds: 37
+        nanos: 900000000
+      }
+      end_time {
+        seconds: 38
+      }
+      word: "a"
+      confidence: 0.83758235
+    }
+    words {
+      start_time {
+        seconds: 38
+      }
+      end_time {
+        seconds: 38
+        nanos: 500000000
+      }
+      word: "single"
+      confidence: 0.7789685
+    }
+    words {
+      start_time {
+        seconds: 38
+        nanos: 500000000
+      }
+      end_time {
+        seconds: 39
+        nanos: 200000000
+      }
+      word: "self-contained"
+      confidence: 0.55526876
+    }
+    words {
+      start_time {
+        seconds: 39
+        nanos: 200000000
+      }
+      end_time {
+        seconds: 40
+        nanos: 100000000
+      }
+      word: "unit"
+      confidence: 0.58057374
+    }
+    words {
+      start_time {
+        seconds: 40
+        nanos: 100000000
+      }
+      end_time {
+        seconds: 40
+        nanos: 300000000
+      }
+      word: "to"
+      confidence: 0.83758235
+    }
+    words {
+      start_time {
+        seconds: 40
+        nanos: 300000000
+      }
+      end_time {
+        seconds: 40
+        nanos: 300000000
+      }
+      word: "the"
+      confidence: 0.83742964
+    }
+    words {
+      start_time {
+        seconds: 40
+        nanos: 300000000
+      }
+      end_time {
+        seconds: 40
+        nanos: 600000000
+      }
+      word: "old"
+      confidence: 0.83739144
+    }
+    words {
+      start_time {
+        seconds: 40
+        nanos: 600000000
+      }
+      end_time {
+        seconds: 40
+        nanos: 800000000
+      }
+      word: "shop"
+      confidence: 0.7567544
+    }
+    words {
+      start_time {
+        seconds: 40
+        nanos: 800000000
+      }
+      end_time {
+        seconds: 41
+        nanos: 200000000
+      }
+      word: "outage"
+      confidence: 0.61343366
+    }
+    words {
+      start_time {
+        seconds: 41
+        nanos: 200000000
+      }
+      end_time {
+        seconds: 41
+        nanos: 400000000
+      }
+      word: "still"
+      confidence: 0.5687303
+    }
+    words {
+      start_time {
+        seconds: 41
+        nanos: 400000000
+      }
+      end_time {
+        seconds: 41
+        nanos: 900000000
+      }
+      word: "Holts"
+      confidence: 0.5278677
+    }
+    words {
+      start_time {
+        seconds: 41
+        nanos: 900000000
+      }
+      end_time {
+        seconds: 42
+        nanos: 400000000
+      }
+      word: "a"
+      confidence: 0.5743645
+    }
+    words {
+      start_time {
+        seconds: 42
+        nanos: 400000000
+      }
+      end_time {
+        seconds: 42
+        nanos: 600000000
+      }
+      word: "good"
+      confidence: 0.6133947
+    }
+    words {
+      start_time {
+        seconds: 42
+        nanos: 600000000
+      }
+      end_time {
+        seconds: 42
+        nanos: 800000000
+      }
+      word: "mechanic"
+      confidence: 0.83758235
+    }
+    words {
+      start_time {
+        seconds: 42
+        nanos: 800000000
+      }
+      end_time {
+        seconds: 43
+        nanos: 200000000
+      }
+      word: "is"
+      confidence: 0.8345489
+    }
+    words {
+      start_time {
+        seconds: 43
+        nanos: 200000000
+      }
+      end_time {
+        seconds: 43
+        nanos: 500000000
+      }
+      word: "usually"
+      confidence: 0.8345875
+    }
+    words {
+      start_time {
+        seconds: 43
+        nanos: 500000000
+      }
+      end_time {
+        seconds: 43
+        nanos: 700000000
+      }
+      word: "a"
+      confidence: 0.83585894
+    }
+    words {
+      start_time {
+        seconds: 43
+        nanos: 700000000
+      }
+      end_time {
+        seconds: 43
+        nanos: 900000000
+      }
+      word: "bad"
+      confidence: 0.8102843
+    }
+    words {
+      start_time {
+        seconds: 43
+        nanos: 900000000
+      }
+      end_time {
+        seconds: 44
+        nanos: 200000000
+      }
+      word: "boss"
+      confidence: 0.5316038
+    }
+    words {
+      start_time {
+        seconds: 44
+        nanos: 200000000
+      }
+      end_time {
+        seconds: 44
+        nanos: 500000000
+      }
+      word: "so"
+      confidence: 0.5289499
+    }
+    words {
+      start_time {
+        seconds: 44
+        nanos: 500000000
+      }
+      end_time {
+        seconds: 44
+        nanos: 900000000
+      }
+      word: "fingers"
+      confidence: 0.6073834
+    }
+    words {
+      start_time {
+        seconds: 44
+        nanos: 900000000
+      }
+      end_time {
+        seconds: 45
+        nanos: 400000000
+      }
+      word: "would"
+      confidence: 0.54298186
+    }
+    words {
+      start_time {
+        seconds: 45
+        nanos: 400000000
+      }
+      end_time {
+        seconds: 45
+        nanos: 500000000
+      }
+      word: "go"
+      confidence: 0.60818446
+    }
+    words {
+      start_time {
+        seconds: 45
+        nanos: 500000000
+      }
+      end_time {
+        seconds: 45
+        nanos: 800000000
+      }
+      word: "higher"
+      confidence: 0.62239707
+    }
+    words {
+      start_time {
+        seconds: 45
+        nanos: 800000000
+      }
+      end_time {
+        seconds: 46
+        nanos: 200000000
+      }
+      word: "in"
+      confidence: 0.6077757
+    }
+    words {
+      start_time {
+        seconds: 46
+        nanos: 200000000
+      }
+      end_time {
+        seconds: 46
+        nanos: 400000000
+      }
+      word: "later"
+      confidence: 0.8266661
+    }
+    words {
+      start_time {
+        seconds: 46
+        nanos: 400000000
+      }
+      end_time {
+        seconds: 46
+        nanos: 500000000
+      }
+      word: "years"
+      confidence: 0.6744135
+    }
+    words {
+      start_time {
+        seconds: 46
+        nanos: 500000000
+      }
+      end_time {
+        seconds: 47
+        nanos: 300000000
+      }
+      word: "so"
+      confidence: 0.5450973
+    }
+    words {
+      start_time {
+        seconds: 47
+        nanos: 300000000
+      }
+      end_time {
+        seconds: 47
+        nanos: 500000000
+      }
+      word: "make"
+      confidence: 0.6076608
+    }
+    words {
+      start_time {
+        seconds: 47
+        nanos: 500000000
+      }
+      end_time {
+        seconds: 47
+        nanos: 700000000
+      }
+      word: "beautiful"
+      confidence: 0.83758235
+    }
+    words {
+      start_time {
+        seconds: 47
+        nanos: 700000000
+      }
+      end_time {
+        seconds: 48
+        nanos: 500000000
+      }
+      word: "chairs"
+      confidence: 0.62724787
+    }
+    words {
+      start_time {
+        seconds: 48
+        nanos: 500000000
+      }
+      end_time {
+        seconds: 49
+        nanos: 200000000
+      }
+      word: "cabinets"
+      confidence: 0.7326473
+    }
+    words {
+      start_time {
+        seconds: 49
+        nanos: 200000000
+      }
+      end_time {
+        seconds: 49
+        nanos: 800000000
+      }
+      word: "chest"
+      confidence: 0.5315109
+    }
+    words {
+      start_time {
+        seconds: 49
+        nanos: 800000000
+      }
+      end_time {
+        seconds: 50
+        nanos: 100000000
+      }
+      word: "doll"
+      confidence: 0.6052444
+    }
+    words {
+      start_time {
+        seconds: 50
+        nanos: 100000000
+      }
+      end_time {
+        seconds: 50
+        nanos: 500000000
+      }
+      word: "houses"
+      confidence: 0.6133275
+    }
+    words {
+      start_time {
+        seconds: 50
+        nanos: 500000000
+      }
+      end_time {
+        seconds: 50
+        nanos: 700000000
+      }
+      word: "it\'s"
+      confidence: 0.54172325
+    }
+    words {
+      start_time {
+        seconds: 50
+        nanos: 700000000
+      }
+      end_time {
+        seconds: 50
+        nanos: 900000000
+      }
+      word: "at"
+      confidence: 0.5238975
+    }
+  }
+  language_code: "en-us"
+}

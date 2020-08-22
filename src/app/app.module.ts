@@ -16,6 +16,8 @@ import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import {StoreDevtoolsModule} from '@ngrx/store-devtools';
 import {environment} from '../environments/environment';
 import {AuthInterceptorService} from './modules/auth/auth-interceptor.service';
+import {AuthService} from './services/security/auth.service';
+import {AuthModule} from './modules/auth/auth.module';
 
 
 
@@ -32,13 +34,14 @@ import {AuthInterceptorService} from './modules/auth/auth-interceptor.service';
         StoreModule.forRoot(fromApp.appReducer),
         BrowserAnimationsModule,
         StoreDevtoolsModule.instrument({ logOnly: environment.production }),
-        EffectsModule.forRoot()
+        EffectsModule.forRoot(),
+        AuthModule
     ],
     providers: [{
       provide: HTTP_INTERCEPTORS,
       useClass: AuthInterceptorService,
       multi: true
-    }],
+    }, AuthService],
     exports: [
     ],
     bootstrap: [AppComponent]

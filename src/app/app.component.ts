@@ -9,9 +9,9 @@ import {AuthService} from './services/security/auth.service';
 export class AppComponent implements OnInit{
   title = 'KryoseFrontend';
 
-  constructor() {
+  constructor(private MyAuthService: AuthService) {
   }
   ngOnInit(): void {
-
+    this.MyAuthService.autoLogin();
   }
 }

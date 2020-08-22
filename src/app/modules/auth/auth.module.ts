@@ -23,6 +23,11 @@ import {AuthService} from '../../services/security/auth.service';
     SignInComponent,
     SignUpComponent
   ],
+  exports: [
+    AngularFireModule,
+    AngularFireDatabaseModule,
+    AngularFirestoreModule
+  ],
   imports: [
     CommonModule,
     FormsModule,
