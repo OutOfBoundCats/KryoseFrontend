@@ -1,8 +1,20 @@
-import {Component, OnInit, Renderer2, ElementRef, ViewChild, AfterViewInit} from '@angular/core';
+import {
+  Component,
+  OnInit,
+  Renderer2,
+  ElementRef,
+  ViewChild,
+  AfterViewInit,
+  HostListener,
+  ViewChildren,
+  QueryList,
+  Inject
+} from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {catchError, map} from 'rxjs/operators';
 import {Store} from '@ngrx/store';
 import * as ApppStore from '../../ReduxStore/app.reducer';
+import {DOCUMENT} from '@angular/common';
 
 @Component({
   selector: 'app-video-editor',
@@ -11,25 +23,24 @@ import * as ApppStore from '../../ReduxStore/app.reducer';
 })
 export class VideoEditorComponent implements OnInit, AfterViewInit {
   // tslint:disable-next-line:max-line-length
-  constructor(private renderer: Renderer2, private elRef: ElementRef, private http: HttpClient, private store: Store<ApppStore.AppState>) { }
+  constructor(private renderer: Renderer2, private elRef: ElementRef, private http: HttpClient, private store: Store<ApppStore.AppState>, @Inject(DOCUMENT) document) { }
   @ViewChild('transcript')
   transcript: ElementRef;
+  @ViewChildren('transcript')
+  childrentranscript: ElementRef ;
   returnString: string;
   words: object[];
+
+
+  @HostListener('click', ['$event'])
+  onClick(e) {
+    console.log(e);
+    console.log(e.target.id);
+  }
+
   ngOnInit(): void {}
 
-  ngAfterViewInit(): void {
-    // console.log(this.transcript.nativeElement);
-    // const initialSpan = this.renderer.createElement('span');
-    // const text = this.renderer.createText('Hi hello');
-    // this.renderer.appendChild(initialSpan, text);
-    // this.renderer.appendChild(this.transcript.nativeElement, initialSpan);
-    // // 2
-    // const initialSpan1 = this.renderer.createElement('span');
-    // const text1 = this.renderer.createText('Hi hello');
-    // this.renderer.appendChild(initialSpan1, text1);
-    // this.renderer.appendChild(this.transcript.nativeElement, initialSpan1);
-  }
+  ngAfterViewInit(): void {}
 
   MyOnclik(): any{
     // let returnString;
@@ -51,18 +62,36 @@ export class VideoEditorComponent implements OnInit, AfterViewInit {
         this.returnString = JSON.stringify(data);
         // console.log('json stringify ' + this.returnString);
         const lenght = data['results_'][0]['alternatives_'][0]['words_']['length'];
+
         for (let _i = 0; _i < lenght ; _i++){
           // console.log(data['results_'][0]['alternatives_'][0]['words_'][_i]['word_']);
           const text = data['results_'][0]['alternatives_'][0]['words_'][_i]['word_'];
+          const confidence = data['results_'][0]['alternatives_'][0]['words_'][_i]['confidence_'];
+          const startTimeNano = data['results_'][0]['alternatives_'][0]['words_'][_i]['startTime_']['nanos_'];
+          const startTimeSec = data['results_'][0]['alternatives_'][0]['words_'][_i]['startTime_']['seconds_'];
+          const startTimeNormalised = startTimeSec * (Math.pow(10,9)) + startTimeNano;
+          const endTimeNano = data['results_'][0]['alternatives_'][0]['words_'][_i]['endTime_']['nanos_'];
+          const endTimeSec = data['results_'][0]['alternatives_'][0]['words_'][_i]['endTime_']['seconds_'];
+          const endTimeNormalised = endTimeSec * (Math.pow(10,9)) + endTimeNano;
           const initialSpan1 = this.renderer.createElement('span');
           const text1 = this.renderer.createText(text +' ');
           this.renderer.appendChild(initialSpan1, text1);
+          this.renderer.addClass(initialSpan1, 'timestamp_transcript');
+          this.renderer.setAttribute(initialSpan1,'startTime', startTimeNormalised);
+          this.renderer.setAttribute(initialSpan1,'endTime', endTimeNormalised);
+          this.renderer.setAttribute(initialSpan1,'confidence', confidence);
+          this.renderer.setAttribute(initialSpan1,'id', String(_i));
+          if(confidence < 0.6){
+            this.renderer.setStyle(initialSpan1,'color','red');
+          }
           this.renderer.appendChild(this.transcript.nativeElement, initialSpan1);
         }
 
       }
     );
-
   }
 
+  GetID() {
+    console.log(document.getElementById('0').innerText);
+  }
 }
