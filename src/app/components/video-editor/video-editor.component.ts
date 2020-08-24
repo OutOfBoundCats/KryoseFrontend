@@ -34,8 +34,9 @@ export class VideoEditorComponent implements OnInit, AfterViewInit {
 
   @HostListener('click', ['$event'])
   onClick(e) {
-    console.log(e);
     console.log(e.target.id);
+    console.log(document.getElementById(e.target.id).innerText);
+    console.log(document.getElementById(e.target.id).getAttribute('data-start'));
   }
 
   ngOnInit(): void {}
@@ -60,6 +61,8 @@ export class VideoEditorComponent implements OnInit, AfterViewInit {
     this.http.get(url, header).subscribe(
       (data) => {
         this.returnString = JSON.stringify(data);
+        console.log(data);
+        localStorage.setItem('jsonTranscript', JSON.stringify(data));
         // console.log('json stringify ' + this.returnString);
         const lenght = data['results_'][0]['alternatives_'][0]['words_']['length'];
 
@@ -70,19 +73,20 @@ export class VideoEditorComponent implements OnInit, AfterViewInit {
           const startTimeNano = data['results_'][0]['alternatives_'][0]['words_'][_i]['startTime_']['nanos_'];
           const startTimeSec = data['results_'][0]['alternatives_'][0]['words_'][_i]['startTime_']['seconds_'];
           const startTimeNormalised = startTimeSec * (Math.pow(10,9)) + startTimeNano;
+          // end time
           const endTimeNano = data['results_'][0]['alternatives_'][0]['words_'][_i]['endTime_']['nanos_'];
           const endTimeSec = data['results_'][0]['alternatives_'][0]['words_'][_i]['endTime_']['seconds_'];
           const endTimeNormalised = endTimeSec * (Math.pow(10,9)) + endTimeNano;
           const initialSpan1 = this.renderer.createElement('span');
-          const text1 = this.renderer.createText(text +' ');
+          const text1 = this.renderer.createText(text + ' ');
           this.renderer.appendChild(initialSpan1, text1);
           this.renderer.addClass(initialSpan1, 'timestamp_transcript');
-          this.renderer.setAttribute(initialSpan1,'startTime', startTimeNormalised);
-          this.renderer.setAttribute(initialSpan1,'endTime', endTimeNormalised);
-          this.renderer.setAttribute(initialSpan1,'confidence', confidence);
-          this.renderer.setAttribute(initialSpan1,'id', String(_i));
-          if(confidence < 0.6){
-            this.renderer.setStyle(initialSpan1,'color','red');
+          this.renderer.setAttribute(initialSpan1, 'data-start', startTimeNormalised);
+          this.renderer.setAttribute(initialSpan1, 'data-end', endTimeNormalised);
+          this.renderer.setAttribute(initialSpan1, 'data-confidence', confidence);
+          this.renderer.setAttribute(initialSpan1, 'id', String(_i));
+          if (confidence < 0.6){
+            this.renderer.setStyle(initialSpan1, 'color', 'red');
           }
           this.renderer.appendChild(this.transcript.nativeElement, initialSpan1);
         }
@@ -91,7 +95,33 @@ export class VideoEditorComponent implements OnInit, AfterViewInit {
     );
   }
 
+  // tslint:disable-next-line:typedef
   GetID() {
-    console.log(document.getElementById('0').innerText);
+    // const article = document.querySelector('#0');
+    // console.log(document.getElementById('50').dataset.start);
+    // Retrive json from localstorage
+    const jsonTranscript = JSON.parse(localStorage.getItem('jsonTranscript'));
+    console.log(jsonTranscript);
+    const lenght = jsonTranscript['results_'][0]['alternatives_'][0]['words_']['length'];
+    let finalText = '';
+    // make changes according to span tags
+    for (let i = 0; i < lenght ; i++){
+      if (document.getElementById(i.toString())){
+        const text = document.getElementById(i.toString()).innerText;
+        jsonTranscript['results_'][0]['alternatives_'][0]['words_'][i]['word_'] = text;
+        finalText = finalText + text;
+        //console.log(text);
+      }else{
+        delete jsonTranscript['results_'][0]['alternatives_'][0]['words_'][i] ;
+      }
+    }
+    jsonTranscript['results_'][0]['alternatives_'][0]['transcript_'] = finalText;
+    localStorage.setItem('jsonTranscript', JSON.stringify(jsonTranscript));
+    console.log('Update to local storage is amde');
+  }
+
+  GetSRT() {
+    const jsonTranscript = JSON.parse(localStorage.getItem('jsonTranscript'));
+
   }
 }
