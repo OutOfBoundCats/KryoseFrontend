@@ -8,6 +8,7 @@ import {MatSliderModule} from '@angular/material/slider';
 import {VideoEditorComponent} from '../../components/video-editor/video-editor.component';
 import {SharedModule} from '../../components/shared/shared.module';
 import {HttpClientModule} from '@angular/common/http';
+import {VideosComponent} from '../../components/videos/videos.component';
 
 
 
@@ -19,7 +20,8 @@ import {HttpClientModule} from '@angular/common/http';
 @NgModule({
   declarations: [
     VideoTextComponent,
-    VideoEditorComponent
+    VideoEditorComponent,
+    VideosComponent
   ],
   imports: [
     CommonModule,

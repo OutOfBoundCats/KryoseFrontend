@@ -15,6 +15,8 @@ import {catchError, map} from 'rxjs/operators';
 import {Store} from '@ngrx/store';
 import * as ApppStore from '../../ReduxStore/app.reducer';
 import {DOCUMENT} from '@angular/common';
+import videojs from 'video.js';
+
 
 @Component({
   selector: 'app-video-editor',
@@ -30,7 +32,6 @@ export class VideoEditorComponent implements OnInit, AfterViewInit {
   childrentranscript: ElementRef ;
   returnString: string;
   words: object[];
-
 
   @HostListener('click', ['$event'])
   onClick(e) {

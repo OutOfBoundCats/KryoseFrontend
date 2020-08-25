@@ -1,14 +1,7 @@
 
 <div class="mycontainer">
   <div class="videoplayer">
-
-     <iframe  src="https://www.youtube.com/embed/WUgvvPRH7Oc"
-              frameborder="0"
-              allow="accelerometer;
-              autoplay; encrypted-media;
-              gyroscope; picture-in-picture" allowfullscreen
-              style="-webkit-transform: scale(1.3); padding-top: 7vh"
-     ></iframe>
+    <app-vjs-player  [options]="{fluid: true , autoplay: false, controls: true, sources: [{ src: 'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4', type: 'video/mp4' }]}"></app-vjs-player>
   </div>
 
   <div class="transacriptContainer">

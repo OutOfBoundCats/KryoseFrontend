@@ -23,6 +23,7 @@ export class AuthService {
     this.AngularFireAUth.signInWithEmailAndPassword(email, password).then(
       (AuthResult) => {
         this.myRefreshToken = AuthResult.user.refreshToken;
+        localStorage.setItem('AuthUSer', JSON.stringify(AuthResult.user));
         AuthResult.user.getIdToken().then(
           (idToken) => {
             this.myIdToken = idToken;
