@@ -16,6 +16,7 @@ import {Store} from '@ngrx/store';
 import * as ApppStore from '../../ReduxStore/app.reducer';
 import {DOCUMENT} from '@angular/common';
 import videojs from 'video.js';
+import * as videoTextActions from '../../modules/video-text/store/videotext.actions';
 
 
 @Component({
@@ -38,6 +39,8 @@ export class VideoEditorComponent implements OnInit, AfterViewInit {
     console.log(e.target.id);
     console.log(document.getElementById(e.target.id).innerText);
     console.log(document.getElementById(e.target.id).getAttribute('data-start'));
+    const startTime = document.getElementById(e.target.id).getAttribute('data-start');
+    this.setCurrentTime(startTime);
   }
 
   ngOnInit(): void {}
@@ -123,6 +126,18 @@ export class VideoEditorComponent implements OnInit, AfterViewInit {
 
   GetSRT() {
     const jsonTranscript = JSON.parse(localStorage.getItem('jsonTranscript'));
+
+  }
+
+  // tslint:disable-next-line:typedef
+  setCurrentTime(startTime: string){
+    const currentTime = parseInt(startTime, 10);
+    const timeInMiliSeconds = currentTime / 1000000;
+    const timeInString = timeInMiliSeconds.toString();
+    this.store.dispatch(new videoTextActions.UpdateCurrentTime({currentTime: timeInString}));
+  }
+  // tslint:disable-next-line:typedef
+  getCurrentTime(){
 
   }
 }
