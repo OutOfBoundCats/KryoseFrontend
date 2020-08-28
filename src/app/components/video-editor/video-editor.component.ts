@@ -131,10 +131,13 @@ export class VideoEditorComponent implements OnInit, AfterViewInit {
 
   // tslint:disable-next-line:typedef
   setCurrentTime(startTime: string){
-    const currentTime = parseInt(startTime, 10);
-    const timeInMiliSeconds = currentTime / 1000000;
-    const timeInString = timeInMiliSeconds.toString();
-    this.store.dispatch(new videoTextActions.UpdateCurrentTime({currentTime: timeInString}));
+    if (startTime != null){
+      const currentTime = parseInt(startTime, 10);
+      const timeInMiliSeconds = currentTime / 1000000;
+      const timeInSeconds = currentTime / 1000000000;
+      const timeInString = timeInMiliSeconds.toString();
+      this.store.dispatch(new videoTextActions.UpdateTranscriptCurrentTime({TranscriptCurrentTime: timeInSeconds.toString()}));
+    }
   }
   // tslint:disable-next-line:typedef
   getCurrentTime(){

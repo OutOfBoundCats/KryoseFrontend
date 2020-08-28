@@ -28,7 +28,7 @@ export class VideosComponent implements OnInit, OnDestroy {
     }[],
   };
   player: videojs.Player;
-
+  currentTranscriptTime: string;
   constructor(
     private elementRef: ElementRef,
     private store: Store<ApppStore.AppState>
@@ -43,8 +43,9 @@ export class VideosComponent implements OnInit, OnDestroy {
     this.target.nativeElement.addEventListener( 'timeupdate', (event) => {
       console.log('The currentTime attribute has been updated. Again.' );
       console.log(this.player.currentTime());
-      this.store.dispatch(new videoTextActions.UpdateCurrentTime({currentTime: this.player.currentTime()}));
+      this.store.dispatch(new videoTextActions.UpdateCurrentTime({VideosCurrentTime: this.player.currentTime()}));
     });
+    this.getCurrentTime();
   }
 
   // tslint:disable-next-line:typedef
@@ -61,11 +62,14 @@ export class VideosComponent implements OnInit, OnDestroy {
   }
   // tslint:disable-next-line:typedef
   getCurrentTime(){
+    this.currentTranscriptTime = null;
     this.store.select('videoTextReducer').subscribe(
-      currentTime => {
-          this.videoCurrentTime = currentTime.currentTime;
-          console.log('from videos ' + parseInt(this.videoCurrentTime, 10) / 1000);
-          this.player.currentTime(parseInt(this.videoCurrentTime, 10) / 1000);
+      reducer => {
+        if (this.currentTranscriptTime !== reducer.TranscriptCurrentTime){
+          this.currentTranscriptTime = reducer.TranscriptCurrentTime;
+          // tslint:disable-next-line:radix
+          this.player.currentTime(parseInt(this.currentTranscriptTime));
+        }
       }
     );
   }

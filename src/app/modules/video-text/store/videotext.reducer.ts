@@ -2,10 +2,13 @@ import * as videoActions from './videotext.actions';
 import * as videoTextActions from './videotext.actions';
 
 export interface State {
-  currentTime: string;
+  VideosCurrentTime: string;
+  TranscriptCurrentTime: string;
+
 }
 const initialState: State = {
-  currentTime: null,
+  VideosCurrentTime: null,
+  TranscriptCurrentTime: null
 };
 
 // tslint:disable-next-line:typedef
@@ -15,9 +18,14 @@ export function videoTextReducer(
 ) {
   switch (action.type) {
     case videoTextActions.UPDATE_CURRENT_TIME:
-          return {
+      return {
         ...state,
-        currentTime: action.payload.currentTime
+        VideosCurrentTime: action.payload.VideosCurrentTime
+      };
+    case videoTextActions.UPDATE_TRANSCRIPT_CURRENT_TIME:
+      return {
+        ...state,
+        TranscriptCurrentTime: action.payload.TranscriptCurrentTime
       };
   }
 
