@@ -7,9 +7,12 @@
   <div class="transacriptContainer">
     <div class="transacript" #transcript contenteditable="true" ></div>
   </div>
-  <button class="btn-primary" (click)="MyOnclik()">Click me</button>
-  <button class="btn-primary" (click)="GetID()">Get ID</button>
-  <button class="btn-primary" (click)="GetSRT()">Get SRT</button>
+  <div class="controls">
+    <button type="button" class="btn btn-primary loadTranscript" (click)="MyOnclik()">Click me</button>
+    <button type="button" class="btn btn-primary getid" (click)="GetID()">Get ID</button>
+    <button type="button" class="btn btn-primary getsrt" (click)="GetSRT()">Get SRT</button>
+  </div>
+
 </div>
 <!--<div *ngFor="let data of returnString.">-->
 <!--  <p>{{data}}</p>-->
