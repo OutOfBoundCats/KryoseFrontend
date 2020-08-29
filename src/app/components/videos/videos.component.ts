@@ -41,9 +41,9 @@ export class VideosComponent implements OnInit, OnDestroy {
       console.log('onPlayerReady', this);
     });
     this.target.nativeElement.addEventListener( 'timeupdate', (event) => {
-      console.log('The currentTime attribute has been updated. Again.' );
-      console.log(this.player.currentTime());
-      this.store.dispatch(new videoTextActions.UpdateCurrentTime({VideosCurrentTime: this.player.currentTime()}));
+      // console.log('The currentTime attribute has been updated. Again.' );
+      // console.log(this.player.currentTime());
+      this.store.dispatch(new videoTextActions.UpdateCurrentTime({VideosCurrentTime: this.player.currentTime().toString()}));
     });
     this.getCurrentTime();
   }
@@ -68,7 +68,7 @@ export class VideosComponent implements OnInit, OnDestroy {
         if (this.currentTranscriptTime !== reducer.TranscriptCurrentTime){
           this.currentTranscriptTime = reducer.TranscriptCurrentTime;
           // tslint:disable-next-line:radix
-          this.player.currentTime(parseInt(this.currentTranscriptTime));
+          this.player.currentTime(parseFloat(this.currentTranscriptTime));
         }
       }
     );

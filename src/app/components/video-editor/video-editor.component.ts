@@ -17,7 +17,9 @@ import * as ApppStore from '../../ReduxStore/app.reducer';
 import {DOCUMENT} from '@angular/common';
 import videojs from 'video.js';
 import * as videoTextActions from '../../modules/video-text/store/videotext.actions';
+import {element} from 'protractor';
 
+declare var $: any;
 
 @Component({
   selector: 'app-video-editor',
@@ -33,7 +35,7 @@ export class VideoEditorComponent implements OnInit, AfterViewInit {
   childrentranscript: ElementRef ;
   returnString: string;
   words: object[];
-
+  currentVideoTime: string = null;
   @HostListener('click', ['$event'])
   onClick(e) {
     console.log(e.target.id);
@@ -43,7 +45,9 @@ export class VideoEditorComponent implements OnInit, AfterViewInit {
     this.setCurrentTime(startTime);
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.getCurrentTime();
+  }
 
   ngAfterViewInit(): void {}
 
@@ -141,6 +145,42 @@ export class VideoEditorComponent implements OnInit, AfterViewInit {
   }
   // tslint:disable-next-line:typedef
   getCurrentTime(){
+    this.store.select('videoTextReducer').subscribe(
+      reducer => {
+        if (this.currentVideoTime !== reducer.VideosCurrentTime){
+          console.log('currenttime not equal  ' + reducer.VideosCurrentTime);
+          this.colorElements(reducer.VideosCurrentTime);
+        }
+      }
+    );
+  }
+  // tslint:disable-next-line:typedef
+  colorElements(currentTime: string){
+    const currentVideoTime = currentTime;
+    const currentTimeInSeconds = parseFloat(currentVideoTime);
+    console.log('current video time is ' + currentTimeInSeconds);
+    const jsonTranscript = JSON.parse(localStorage.getItem('jsonTranscript'));
+    // console.log(jsonTranscript);
+    const lenght = jsonTranscript['results_'][0]['alternatives_'][0]['words_']['length'];
+    // make changes according to span tags
+    for (let i = 0; i < lenght ; i++){
+      console.log('runnign for loop ' + i);
+      const currentElement = document.getElementById(String(i));
+      const startTime = parseFloat(currentElement.getAttribute('data-start'));
+      // @ts-ignore
+      const startTimeInSeconds = startTime / 1000000000;
+      const endTime = parseFloat(currentElement.getAttribute('data-end'));
+      // @ts-ignore
+      const endTimeInSeconds = endTime / 1000000000;
+      console.log('starttime is '+startTimeInSeconds + ' end time is '+endTimeInSeconds+ ' for elemnt '+currentElement.innerText);
+      if ((startTimeInSeconds < parseFloat(currentVideoTime)) && (endTimeInSeconds > parseFloat(currentVideoTime))){
+        console.log(startTimeInSeconds + ' is less than ' + parseFloat(currentVideoTime) + ' and ' + endTimeInSeconds + 'is grater than '+ parseFloat(currentVideoTime));
+        console.log('change color to blue ' + currentElement.innerText);
+        currentElement.style.backgroundColor = 'blue';
 
+      }else{
+        currentElement.style.backgroundColor = '';
+      }
+    }
   }
 }
