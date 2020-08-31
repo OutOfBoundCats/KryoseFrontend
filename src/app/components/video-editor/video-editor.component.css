@@ -4,7 +4,7 @@
   padding: 10px 20px ;
   display: grid;
   width: 100%;
-  height: 80vh;
+  height: 85vh;
   grid-template-columns: 0.5fr 0.5fr 0.5fr;
   grid-template-rows: 1fr 1fr 1.8fr ;
   grid-template-areas:
@@ -46,29 +46,30 @@
 }
 .controls{
   background: #6fffd2;
+  padding-top:1vh;
+  grid-gap: 0.4rem;
   grid-area: controls;
   display: grid;
   width: 100%;
   grid-template-columns: 0.5fr 0.5fr 0.5fr;
   grid-template-rows: 0.1fr ;
   grid-template-areas:
-  "loadtranscript getid getsrt "
+  "getsrt loadtranscript getid "
 
 }
 .loadTranscript{
-  background: blue;
   grid-area: loadtranscript;
   border-radius: 15px;
   text-align: center;
 }
 .getid{
-  background: blue;
+
   grid-area: getid;
   border-radius: 15px;
   text-align: center;
 }
 .getsrt{
-  background: blue;
+
   grid-area: getsrt;
   border-radius: 15px;
   text-align: center;

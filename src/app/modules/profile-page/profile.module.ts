@@ -7,6 +7,7 @@ import {SidebarComponent} from '../../components/shared/sidebar/sidebar.componen
 import {NavbarComponent} from '../../components/shared/navbar/navbar.component';
 import {AuthGaurd} from '../auth/auth.guard';
 import {SharedModule} from '../../components/shared/shared.module';
+import {WindowRefService} from './window-ref.service';
 
 
 
@@ -21,6 +22,9 @@ import {SharedModule} from '../../components/shared/shared.module';
   imports: [
     RouterModule.forChild([{path: '', component: ProfilePageComponent, canActivate: [AuthGaurd] }]),
     SharedModule
+  ],
+  providers: [
+    WindowRefService
   ]
 })
 export class ProfileModule {}
