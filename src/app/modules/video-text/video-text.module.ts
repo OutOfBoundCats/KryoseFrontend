@@ -7,7 +7,6 @@ import {VideoTextComponent} from './video-text.component';
 import {MatSliderModule} from '@angular/material/slider';
 import {VideoEditorComponent} from '../../components/video-editor/video-editor.component';
 import {SharedModule} from '../../components/shared/shared.module';
-import {HttpClientModule} from '@angular/common/http';
 import {VideosComponent} from '../../components/videos/videos.component';
 
 
@@ -28,8 +27,7 @@ import {VideosComponent} from '../../components/videos/videos.component';
     FormsModule,
     RouterModule.forChild([{path: '', component: VideoTextComponent}]),
     MatSliderModule,
-    SharedModule,
-    HttpClientModule,
+    SharedModule
 
   ]
 })

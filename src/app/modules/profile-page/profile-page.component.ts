@@ -1,5 +1,6 @@
 import {Component, NgZone, OnInit} from '@angular/core';
 import {ICustomWindow, WindowRefService} from './window-ref.service';
+import {RazorpayService} from '../../services/payment/razorpay.service';
 
 @Component({
   selector: 'app-profile-page',
@@ -16,6 +17,7 @@ export class ProfilePageComponent implements OnInit {
     name: 'The Swag Coder',
     description: 'Shopping',
     amount: 10000, // razorpay takes amount in paisa
+    order_id: null,
     prefill: {
       name: 'The Swag Coder',
       email: '', // add your email id
@@ -36,7 +38,8 @@ export class ProfilePageComponent implements OnInit {
 
   constructor(
     private zone: NgZone,
-    private winRef: WindowRefService
+    private winRef: WindowRefService,
+    private razorpayService: RazorpayService
   ) {
     this._window = this.winRef.nativeWindow;
   }
@@ -53,5 +56,15 @@ export class ProfilePageComponent implements OnInit {
     this.zone.run(() => {
       // add API call here
     });
+  }
+
+  // tslint:disable-next-line:typedef
+  fetchSubscription() {
+    this.razorpayService.fetchSubscriptions();
+  }
+
+  // tslint:disable-next-line:typedef
+  createSubscription() {
+    this.razorpayService.createSubscription();
   }
 }

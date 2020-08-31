@@ -52,21 +52,8 @@ export class VideoEditorComponent implements OnInit, AfterViewInit {
   ngAfterViewInit(): void {}
 
   MyOnclik(): any{
-    // let returnString;
-    let mytoken;
-    this.store.select('authReduce').subscribe(
-      (data) => {
-        mytoken = data.user.token;
-      }
-    );
-
-    const token = mytoken;
-    const header = {
-      headers: new HttpHeaders()
-        .set('Authorization', 'Bearer ' + token)
-    };
     const url = 'http://localhost:8090/api/totext';
-    this.http.get(url, header).subscribe(
+    this.http.get(url).subscribe(
       (data) => {
         this.returnString = JSON.stringify(data);
         console.log(data);

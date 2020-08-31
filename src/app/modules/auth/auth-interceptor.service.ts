@@ -18,7 +18,7 @@ export class AuthInterceptorService implements HttpInterceptor{
         return authState.user;
       }),
       exhaustMap(user => {
-        console.log(user.token);
+        console.log('from auth interceptor service' + user.token);
         if (!user){
           return next.handle(req);
         }

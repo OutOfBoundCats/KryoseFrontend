@@ -8,6 +8,7 @@ import {NavbarComponent} from '../../components/shared/navbar/navbar.component';
 import {AuthGaurd} from '../auth/auth.guard';
 import {SharedModule} from '../../components/shared/shared.module';
 import {WindowRefService} from './window-ref.service';
+import {RazorpayService} from '../../services/payment/razorpay.service';
 
 
 
@@ -24,7 +25,8 @@ import {WindowRefService} from './window-ref.service';
     SharedModule
   ],
   providers: [
-    WindowRefService
+    WindowRefService,
+    RazorpayService
   ]
 })
 export class ProfileModule {}
