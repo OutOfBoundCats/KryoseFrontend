@@ -1,0 +1,51 @@
+.mycontainer{
+  padding: 10px 20px ;
+  display: grid;
+  width: 100%;
+  height: auto;
+  grid-template-columns: 1fr 1fr 0.2fr;
+  grid-template-rows: 1fr;
+  grid-template-areas:
+    "iteminfo iteminfo controls";
+  grid-gap: 0.2rem;
+  font-weight: 800;
+  font-size: 16px;
+  color: #042331;
+
+}
+
+.iteminfo{
+  background: #1b9bff;
+  grid-area: iteminfo;
+  display: grid;
+  grid-template-columns: 1fr 1fr 0.2fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "title . date"
+    "description . . ";
+  border-radius: 15px;
+  padding-left: 3vh;
+}
+.description{
+  grid-area: description;
+}
+.title{
+  grid-area: title;
+}
+.date{
+  text-align: center;
+  grid-area: date;
+}
+.controls{
+  background: #0a5275;
+  grid-area: controls;
+  border-radius: 15px;
+  text-align: center;
+}
+button{
+  margin: 0;
+  position: relative;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}

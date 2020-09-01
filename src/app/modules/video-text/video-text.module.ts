@@ -8,6 +8,8 @@ import {MatSliderModule} from '@angular/material/slider';
 import {VideoEditorComponent} from '../../components/video-editor/video-editor.component';
 import {SharedModule} from '../../components/shared/shared.module';
 import {VideosComponent} from '../../components/videos/videos.component';
+import { VideoTextHomeComponent } from './video-text-list/video-text-home.component';
+import { VideoTextItemComponent } from './video-text-list/video-text-item/video-text-item.component';
 
 
 
@@ -20,12 +22,17 @@ import {VideosComponent} from '../../components/videos/videos.component';
   declarations: [
     VideoTextComponent,
     VideoEditorComponent,
-    VideosComponent
+    VideosComponent,
+    VideoTextHomeComponent,
+    VideoTextItemComponent
   ],
   imports: [
     CommonModule,
     FormsModule,
-    RouterModule.forChild([{path: '', component: VideoTextComponent}]),
+    RouterModule.forChild([
+      {path: '', component: VideoTextHomeComponent},
+      {path: 'id', component: VideoTextComponent}
+      ]),
     MatSliderModule,
     SharedModule
 

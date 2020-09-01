@@ -17,7 +17,7 @@ export class ProfilePageComponent implements OnInit {
     name: 'The Swag Coder',
     description: 'Shopping',
     amount: 10000, // razorpay takes amount in paisa
-    order_id: null,
+    order_id: 'sub_FXeIiOSPlLHhui',
     prefill: {
       name: 'The Swag Coder',
       email: '', // add your email id

@@ -1,0 +1,16 @@
+.mycontainer{
+  height: 100%;
+  padding: 10px 20px ;
+  font-weight: 800;
+  font-size: 16px;
+  color: #042331;
+  background-color: #6fffd2;
+}
+
+.createnew{
+  padding: 10px 20px ;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  height: 30vh;
+}
